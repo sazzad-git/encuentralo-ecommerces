@@ -1,0 +1,239 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Bridone";
+  src: url("/fonts/Bridone_21.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.custom-container {
+  width: 90%;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.item-head {
+  display: flex;
+  overflow-x: auto;
+  gap: 30px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  background-color: brown;
+}
+
+.nunito-font {
+  font-family: "Nunito", serif;
+}
+
+hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbarc,
+.categories-head::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.custom-shadow {
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+
+.another-box::before {
+  content: "+12";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.49);
+}
+
+.carousel div {
+  overflow-y: auto;
+}
+
+.destacados-img-box {
+  margin-top: 4px;
+}
+
+/* ===== Footer ===== */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .custom-container {
+    width: 96%;
+  }
+  .top .boxes {
+    display: none;
+  }
+
+  .top {
+    padding: 5px 0px;
+  }
+
+  .top .container {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .bottom {
+    width: 100%;
+  }
+
+  .bottom .img-boxes {
+    gap: 3px;
+    padding: 5px 3px;
+  }
+
+  .bottom .img-boxes .box {
+    width: 35px;
+    height: 35px;
+  }
+
+  .shop-box .img-box {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* ===== Destacados ===== */
+
+  .another-box::before {
+    font-size: 8px;
+  }
+
+  /* ===== Footer ===== */
+
+  .footer-head h2 {
+    font-size: 25px;
+  }
+
+  .social-boxes {
+    gap: 15px;
+    margin-top: 5px;
+    padding-top: 5px;
+  }
+
+  .social-boxes .box {
+    width: 35px;
+    height: 35px;
+  }
+
+  .social-boxes .box img {
+    max-width: 50%;
+  }
+
+  .footer-head ul {
+    gap: 15px;
+  }
+
+  .footer-head a,
+  .footer-head p {
+    font-size: 12px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  /* ===== Footer ===== */
+
+  .footer-head h2 {
+    font-size: 25px;
+  }
+
+  .social-boxes {
+    gap: 15px;
+    margin-top: 5px;
+    padding-top: 5px;
+  }
+
+  .social-boxes .box {
+    width: 35px;
+    height: 35px;
+  }
+
+  .social-boxes .box img {
+    max-width: 50%;
+  }
+
+  .footer-head ul {
+    gap: 15px;
+  }
+
+  .footer-head a,
+  .footer-head p {
+    font-size: 12px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  /* ===== Footer ===== */
+
+  .footer-head h2 {
+    font-size: 26px;
+  }
+
+  .social-boxes {
+    gap: 15px;
+    margin-top: 5px;
+    padding-top: 10px;
+  }
+
+  .social-boxes .box {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-boxes .box img {
+    max-width: 50%;
+  }
+
+  .footer-head ul {
+    gap: 15px;
+  }
+
+  .footer-head a,
+  .footer-head p {
+    font-size: 14px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1024px) and (max-width: 1124px) {
+  .another-style {
+    flex-basis: 50%;
+    flex-basis: 33.333333%;
+  }
+  .another-second {
+    flex-basis: 50%;
+  }
+}
