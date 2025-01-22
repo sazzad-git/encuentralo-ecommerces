@@ -1,9 +1,13 @@
 import Image from "next/image";
-import img from "@/public/Poleronchampionblue1.png";
 import shopLogo from "@/public/images/shoplogo.png";
 import { MdOutlineHome } from "react-icons/md";
 import { LuTruck } from "react-icons/lu";
 import { Nunito } from "next/font/google";
+import img from "@/public/Poleronchampionblue1.png";
+import imgOne from "@/public/clothing_01.png";
+import imgTwo from "@/public/clothing_02.png";
+import imgThree from "@/public/clothing_4.png";
+import imgFour from "@/public/images/destacados_2.png";
 
 const nunito = Nunito({
   weight: "400",
@@ -12,7 +16,14 @@ const nunito = Nunito({
 });
 
 export default function SmallInteresar() {
-  const data = [1, 2, 3, 4];
+  const data = [
+    { id: 1, img: img },
+    { id: 2, img: imgOne },
+    { id: 3, img: imgTwo },
+    { id: 4, img: imgThree },
+    { id: 5, img: imgFour },
+    { id: 6, img: imgTwo },
+  ];
 
   return (
     <div className="block md:hidden">
@@ -25,11 +36,11 @@ export default function SmallInteresar() {
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
           {data.map((sData, index) => (
             <>
-              <div key={index} className="item border bg-white">
+              <div key={sData.id} className="item border bg-white">
                 <div className="h-[170px] p-1">
                   <Image
                     className="w-full h-full object-cover"
-                    src={img}
+                    src={sData.img}
                     alt="Slider Cover"
                   />
                 </div>
