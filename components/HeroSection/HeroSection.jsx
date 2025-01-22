@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import img1 from "@/public/hero/img1.png";
 import img2 from "@/public/hero/img2.png";
 import img3 from "@/public/hero/img3.png";
-import hero1 from "../../public/hero/hero1.png";
+import hero1 from "../../public/Poleronchampionblue1.png";
 import hero2 from "../../public/hero/hero2.png";
 import hero3 from "../../public/hero/hero3.png";
 import GroupRight from "@/public/hero/GrpupRight.svg";
@@ -35,14 +35,14 @@ const products = [
   },
   {
     id: 2,
-    image: hero2,
+    image: hero1,
     title: "Impulsonaturaltienda",
     title2: "Proteinas, Vitaminas, Minerales",
     shopLogo: img2,
   },
   {
     id: 3,
-    image: hero3,
+    image: hero1,
     title: "5ave.nue",
     title2: "Camisetas, Sudaderas, Pantalones",
     shopLogo: img3,
@@ -56,14 +56,14 @@ const products = [
   },
   {
     id: 5,
-    image: hero2,
+    image: hero1,
     title: "Impulsonaturaltienda",
     title2: "Proteinas, Vitaminas, Minerales",
     shopLogo: img2,
   },
   {
     id: 6,
-    image: hero3,
+    image: hero1,
     title: "5ave.nue",
     title2: "Camisetas, Sudaderas, Pantalones",
     shopLogo: img3,
@@ -168,9 +168,9 @@ function ProductCard({
 }) {
   const cardStyle = {
     transform: `
-      ${isFirst ? "rotate(-5deg) scale(0.9)" : ""}
-      ${isActive ? "translateY(-15px) scale(0.9)" : ""} 
-      ${isLast ? "rotate(5deg) scale(0.9)" : ""}
+      ${isFirst ? "rotate(-3deg) translateX(15px) scale(0.9)" : ""}
+      ${isActive ? "translateY(-15px) scale(0.9)" : ""}
+      ${isLast ? "rotate(3deg) translateX(-15px) scale(0.9)" : ""}
     `,
     transition: "all 0.3s ease-in-out",
     backfaceVisibility: "hidden",
