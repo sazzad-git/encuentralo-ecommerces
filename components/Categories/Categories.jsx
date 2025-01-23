@@ -80,7 +80,7 @@ export default function Categories() {
                     alt={sCategory.name}
                   />
                 </div>
-                <p className="hidden md:block text-[14px] lg:text-[17px]">
+                <p className="hidden font-bridone md:block text-[14px] lg:text-[17px]">
                   {sCategory.name}
                 </p>
               </div>
