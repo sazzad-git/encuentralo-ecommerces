@@ -98,7 +98,7 @@ export default function HeroSection() {
         </h1>
         <div
           data-aos="flip-down"
-          className="w-11/12 max-w-7xl bg-opacity-90 rounded-lg p-0 md:p-4"
+          className="md:w-11/12 sm:w-full max-w-7xl bg-opacity-90 rounded-lg p-0 md:p-4"
         >
           {/* Desktop View */}
           <div className="hidden md:block relative">
@@ -140,7 +140,7 @@ export default function HeroSection() {
           </div>
 
           {/* Mobile View */}
-          <div className="md:hidden grid grid-cols-2 gap-2">
+          <div className="md:hidden mx-2 grid grid-cols-2 gap-2">
             {products.slice(0, 2).map((product) => (
               <ProductCard
                 key={product.id}
@@ -179,27 +179,27 @@ function ProductCard({
 
   return (
     <div
-      className="flex-shrink-0 bg-[#FAFAFA] sm:w-[185px] sm:h-[190px] md:mt-[-25px] lg:mt-0  md:h-[256px] lg:h-[320px] md:w-full  lg:w-full rounded-lg shadow-md m-2 md:m-0 px-2 overflow-visible"
+      className="flex-shrink-0 bg-[#FAFAFA] sm:w-[185px] sm:h-[170px] md:mt-[-25px] lg:mt-0  md:h-[256px] lg:h-[320px] md:w-full  lg:w-full rounded-lg shadow-md m-1 md:m-0 px-2 overflow-visible"
       style={cardStyle}
     >
       <Image
         src={image}
         alt={title}
-        width={300}
+        width={360}
         height={200}
         className="w-full h-36  md:h-[194px] lg:h-56 object-cover pt-[10px] md:mt-[29px] rounded-t-lg"
       />
-      <div className="flex justify-between p-2 lg:p-4 relative min-h-[50px] md:min-h-[70px] lg:min-h-[100px]">
-        <div className="flex items-center gap-2 lg:gap-3">
+      <div className="flex justify-between p-0 md:p-2 lg:p-4 relative min-h-[45px] md:min-h-[70px] lg:min-h-[100px]">
+        <div className="flex items-center gap-1 md:gap-2 lg:gap-3">
           <div className="w-[25px] h-[25px] md:w-[35px] md:h-[35px] lg:w-[52px] lg:h-[52px] rounded-full">
             <Image src={shopLogo} alt="Shop Logo" />
           </div>
           <div className="leading-0 lg:leading-[125%]">
-            <h4 className="text-[7px] font-bridone md:text-[13px] lg:text-[20px]">
+            <h4 className="text-[6px] font-bridone md:text-[13px] lg:text-[20px]">
               {title}
             </h4>
             <p
-              className={`${nunito.variable} font-sans capitalize lg:mt-2 text-[5px] md:text-[10px] lg:text-[13px]`}
+              className={`${nunito.variable} font-sans capitalize lg:mt-2 text-[4px] md:text-[10px] lg:text-[13px]`}
             >
               {title2}
             </p>
