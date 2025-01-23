@@ -29,7 +29,7 @@ export default function SmallInteresar() {
     <div className="block md:hidden">
       <div className="custom-container pt-4 pb-20">
         <div className="flex items-center pb-2">
-          <h2 className="text-[14px] font-bridone md:text-[25px] lg:text-[40px] text-[#222222] font-semibold">
+          <h2 className="text-[14px] font-bridone md:text-[25px] lg:text-[40px] text-[#222222]">
             TE PODRIA INTERESAR
           </h2>
         </div>

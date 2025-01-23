@@ -9,6 +9,7 @@ import imgOne from "@/public/images/destacados_2.png";
 import imgTwo from "@/public/clothing_02.png";
 import c from "@/public/clothing_01.png";
 import d from "@/public/clothing_02.png";
+import victor2 from "@/public/hero/Vector2.svg";
 import { Nunito } from "next/font/google";
 import {
   Carousel,
@@ -26,7 +27,7 @@ const nunito = Nunito({
 
 export default function Destacados() {
   const data = [
-    { id: 1, img: img, thumbnails: [img, imgOne, c, d] },
+    { id: 1, img: img, victor: victor2, thumbnails: [img, imgOne, c, d] },
     { id: 2, img: imgOne, thumbnails: [img, imgOne, c, d] },
     { id: 3, img: imgTwo, thumbnails: [img, imgOne, c, d] },
     { id: 4, img: img, thumbnails: [img, imgOne, c, d] },
@@ -80,7 +81,7 @@ export default function Destacados() {
       */}
       <div className="flex items-center justify-between pb-2 lg:mb-[34px] md:pb-4 lg:pb-6">
         <h2
-          className={`font-semibold font-bridone text-[14px] md:text-[18px] lg:text-[40px] text-[#222222]`}
+          className={`font-bridone text-[14px] md:text-[18px] lg:text-[40px] text-[#222222]`}
         >
           DESTACADOS
         </h2>
@@ -151,11 +152,18 @@ export default function Destacados() {
                       <Image src={shopLogo} alt="Shop Logo" />
                     </div>
                     <div className="leading-0 lg:leading-[125%]">
-                      <h4 className="text-[10px] font-bridone md:text-[13px] lg:text-[20px]">
-                        Aress.Cl
+                      <h4 className="text-[10px] text-[#222222] font-[350] font-bridone md:text-[13px] lg:text-[20px]">
+                        Aress.Cl{" "}
+                        {card.victor && (
+                          <Image
+                            className="inline"
+                            src={card?.victor}
+                            alt="Vector"
+                          />
+                        )}
                       </h4>
                       <p
-                        className={`${nunito.variable} lg:mt-1 text-[9px] md:text-[11px] lg:text-[16px] font-bold text-[#A06205]`}
+                        className={`${nunito.variable} lg:mt-1 text-[9px] md:text-[11px] lg:text-[18px] font-bold text-[#A06205]`}
                       >
                         Accesorios
                         <span className={`${nunito.variable} font-normal`}>

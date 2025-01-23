@@ -74,7 +74,7 @@ export default function SimpleSlider() {
     >
       <div className="flex items-center justify-between pb-2 md:pb-4 lg:pb-6 lg:mb-[54px]">
         <h2
-          className={`font-semibold text-[14px] font-bridone md:text-[18px] lg:text-[40px] text-[#222222]`}
+          className={` text-[14px] font-bridone md:text-[18px] lg:text-[40px] text-[#222222]`}
         >
           EXPLORA
         </h2>
@@ -115,7 +115,7 @@ export default function SimpleSlider() {
                       <Image src={shopLogo} alt="Shop Logo" />
                     </div>
                     <div className="leading-0 lg:leading-[125%]">
-                      <h4 className="text-[10px] font-bridone md:text-[13px] lg:text-[20px]">
+                      <h4 className="text-[10px] font-bridone md:text-[13px] lg:text-[20px] text-[#222222] font-[350]">
                         Aress.Cl
                       </h4>
                       <p

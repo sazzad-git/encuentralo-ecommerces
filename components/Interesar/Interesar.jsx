@@ -9,6 +9,7 @@ import imgOne from "@/public/clothing_01.png";
 import imgTwo from "@/public/clothing_02.png";
 import imgThree from "@/public/clothing_4.png";
 import imgFour from "@/public/images/destacados_2.png";
+import victor2 from "@/public/hero/Vector2.svg";
 import {
   Carousel,
   CarouselContent,
@@ -27,7 +28,7 @@ const nunito = Nunito({
 export default function Interesar() {
   const data = [
     { id: 1, img: img },
-    { id: 2, img: imgOne },
+    { id: 2, img: imgOne, victor: victor2 },
     { id: 3, img: imgTwo },
     { id: 4, img: imgThree },
     { id: 5, img: imgFour },
@@ -58,7 +59,7 @@ export default function Interesar() {
     >
       <div className="flex items-center justify-between pb-2 md:pb-4 lg:pb-6 lg:mb-[32px]">
         <h2
-          className={`font-semibold font-bridone text-[14px] md:text-[18px] lg:text-[40px] text-[#222222]`}
+          className={` font-bridone text-[14px] md:text-[18px] lg:text-[40px] text-[#222222]`}
         >
           TE PODRIA INTERESAR
         </h2>
@@ -108,11 +109,18 @@ export default function Interesar() {
                       <Image src={shopLogo} alt="Shop Logo" />
                     </div>
                     <div className="leading-0 lg:leading-[125%]">
-                      <h4 className="text-[10px] font-bridone md:text-[13px] lg:text-[16px]">
-                        Aress.Cl
+                      <h4 className="text-[10px] text-[#222222] font-[350] font-bridone md:text-[13px] lg:text-[20px]">
+                        Aress.Cl{" "}
+                        {sData.victor && (
+                          <Image
+                            className="inline"
+                            src={sData?.victor}
+                            alt="Vector"
+                          />
+                        )}
                       </h4>
                       <p
-                        className={`text-[9px] md:text-[12px] lg:text-[16px] font-bold text-[#A06205] ${nunito.variable}`}
+                        className={`text-[9px] md:text-[12px] lg:text-[14px] font-bold text-[#A06205] ${nunito.variable}`}
                       >
                         Accesorios
                         <span className={`font-normal ${nunito.variable}`}>

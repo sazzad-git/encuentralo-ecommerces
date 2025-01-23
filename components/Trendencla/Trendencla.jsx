@@ -36,7 +36,7 @@ export default function Trendencla() {
       <div className="custom-container">
         <div className="grid grid-cols-4 gap-5">
           <div className="col-span-1 bg-white flex items-center justify-center">
-            <h2 className="title uppercase font-bridone text-2xl font-bold">
+            <h2 className="title uppercase font-bridone text-[32px] font-semibold text-[#222222]">
               EN TENDENCIA
             </h2>
           </div>
@@ -50,7 +50,7 @@ export default function Trendencla() {
                       <Image src={begLogo} alt="Shop Logo" />
                     </div>
                     <div className="leading-0 lg:leading-[125%]">
-                      <h4 className="text-[10px] font-bridone md:text-[13px] lg:text-[20px]">
+                      <h4 className="text-[10px] font-bridone md:text-[13px] lg:text-[20px] font-[350] text-[#222222]">
                         Aress.Cl
                       </h4>
                       <p

@@ -2,6 +2,14 @@
 
 import { useState, useEffect, useRef } from "react";
 import CategoriesMenu from "../CategoriesMenu/CategoriesMenu";
+import { Nunito } from "next/font/google";
+
+// nomito font
+const nunito = Nunito({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-nunito",
+});
 
 export default function Navbar() {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
@@ -41,14 +49,14 @@ export default function Navbar() {
                 className="dropdown-button py-1 pe-3 md:pe-4 lg:pe-5 flex items-center gap-1 capitalize text-gray-500 text-[10px] md:text-[14px] lg:text-[18px] hover:text-[#A06205]"
               >
                 <i className="fa-solid fa-bars size-3 md:size-4 lg:size-5"></i>
-                <span>Categorías</span>
+                <span className={`${nunito.variable}`}>Categorías</span>
               </button>
               {isDropdownVisible && <CategoriesMenu ref={dropdownRef} />}
             </li>
             <li>
               <a
                 href="#"
-                className="py-1 px-4 md:px-4 lg:px-5 inline-block capitalize text-gray-500 text-[10px] md:text-[14px] lg:text-[18px] hover:text-[#A06205]"
+                className={`py-1 px-4 md:px-4 lg:px-5 inline-block capitalize text-gray-500 text-[10px] md:text-[14px] lg:text-[18px] hover:text-[#A06205] ${nunito.variable}`}
               >
                 Recién llegados
               </a>
@@ -56,7 +64,7 @@ export default function Navbar() {
             <li>
               <a
                 href="#"
-                className="py-1 px-3 md:px-4 lg:px-5 inline-block capitalize text-gray-500 text-[10px] md:text-[14px] lg:text-[18px] hover:text-[#A06205]"
+                className={`py-1 px-3 md:px-4 lg:px-5 inline-block capitalize text-gray-500 text-[10px] md:text-[14px] lg:text-[18px] hover:text-[#A06205] ${nunito.variable}`}
               >
                 hechos a Mano
               </a>
@@ -64,7 +72,7 @@ export default function Navbar() {
             <li className="hidden lg:block">
               <a
                 href="#"
-                className="py-1 px-3 md:px-4 lg:px-5 inline-block capitalize text-gray-500 text-[10px] md:text-[14px] lg:text-[18px] hover:text-[#A06205]"
+                className={`py-1 px-3 md:px-4 lg:px-5 inline-block capitalize text-gray-500 text-[10px] md:text-[14px] lg:text-[18px] hover:text-[#A06205]`}
               >
                 Regalos
               </a>
@@ -72,7 +80,7 @@ export default function Navbar() {
             <li>
               <a
                 href="#"
-                className="py-[5px] px-3 me-3 md:px-4 lg:px-5 text-[10px] md:text-[14px] lg:text-[18px] inline-block capitalize bg-[#f4ede2] rounded-full text-[#A06205] border border-[#A06205] hover:bg-[#A06205] hover:text-white"
+                className={`py-[5px] px-3 me-3 md:px-4 lg:px-5 text-[10px] md:text-[14px] lg:text-[18px] inline-block capitalize bg-[#f4ede2] rounded-full text-[#A06205] border border-[#A06205] hover:bg-[#A06205] hover:text-white`}
               >
                 Sorprendeme
               </a>

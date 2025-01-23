@@ -67,7 +67,7 @@ export default function Header() {
               />
               <div
                 onClick={handleToggleDropdown}
-                className="bg-[#A06205] h-[20px] w-[20px] md:h-[40px] md:w-[40px] grid place-items-center rounded-md cursor-pointer"
+                className="bg-[#A06205] h-[20px] w-[20px] md:h-[34px] md:w-[35px] grid place-items-center rounded-[10px] cursor-pointer"
               >
                 <i className="fa-solid fa-sliders  size-4 text-white"></i>
               </div>

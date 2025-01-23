@@ -12,6 +12,8 @@ import hero1 from "../../public/hero/hero1.jpg";
 import hero2 from "../../public/hero/hero2.jpg";
 import hero3 from "../../public/hero/hero3.jpg";
 import GroupRight from "@/public/hero/GrpupRight.svg";
+import Mask from "@/public/hero/Mask.svg";
+import car from "@/public/hero/car.svg";
 import GroupLeft from "@/public/hero/GroupLeft.svg";
 import { MdOutlineHome, MdOutlineRecycling } from "react-icons/md";
 import { LuTruck } from "react-icons/lu";
@@ -28,42 +30,42 @@ const nunito = Nunito({
 const products = [
   {
     id: 1,
-    image: hero1,
+    image: hero2,
     title: "Alba-Sofia-en-varas",
     title2: "Aros, Anillos, Collares",
     shopLogo: img1,
   },
   {
     id: 2,
-    image: hero2,
+    image: hero3,
     title: "Impulsonaturaltienda",
     title2: "Proteinas, Vitaminas, Minerales",
     shopLogo: img2,
   },
   {
     id: 3,
-    image: hero3,
+    image: hero1,
     title: "5ave.nue",
     title2: "Camisetas, Sudaderas, Pantalones",
     shopLogo: img3,
   },
   {
     id: 4,
-    image: hero1,
+    image: hero3,
     title: "Alba-Sofia-en-varas",
     title2: "Aros, Anillos, Collares",
     shopLogo: img1,
   },
   {
     id: 5,
-    image: hero3,
+    image: hero2,
     title: "Impulsonaturaltienda",
     title2: "Proteinas, Vitaminas, Minerales",
     shopLogo: img2,
   },
   {
     id: 6,
-    image: hero2,
+    image: hero1,
     title: "5ave.nue",
     title2: "Camisetas, Sudaderas, Pantalones",
     shopLogo: img3,
@@ -195,7 +197,7 @@ function ProductCard({
             <Image className="aspect-square" src={shopLogo} alt="Shop Logo" />
           </div>
           <div className="leading-0 lg:leading-[125%]">
-            <h4 className="text-[6px] font-bridone md:text-[13px] lg:text-[20px]">
+            <h4 className="text-[6px] text-[#222222] font-[350] font-bridone md:text-[13px] lg:text-[20px]">
               {title}
             </h4>
             <p
@@ -208,10 +210,12 @@ function ProductCard({
 
         <div className="absolute top-2 pt-[5px] right-2 flex items-center justify-end gap-1 lg:top-[38%] lg:-translate-y-1/2">
           <div className="w-[12px] h-[13px] md:w-[16px] md:h-[16px] lg:w-[22px] lg:h-[24px] border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer">
-            <MdOutlineHome className="text-[10px] md:text-[13px] lg:text-[16px] text-[#BF8937]" />
+            <Image src={Mask} width={12} height={13} alt="Mask" />
+            {/* <MdOutlineHome className="text-[10px] md:text-[13px] lg:text-[16px] text-[#BF8937]" /> */}
           </div>
           <div className="w-[12px] h-[13px] md:w-[16px] md:h-[16px] lg:w-[22px] lg:h-[24px] border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer">
-            <LuTruck className="text-[10px] md:text-[13px] lg:text-[16px] text-[#BF8937]" />
+            <Image src={car} width={12} height={13} alt="Car" />
+            {/* <LuTruck className="text-[10px] md:text-[13px] lg:text-[16px] text-[#BF8937]" /> */}
           </div>
         </div>
       </div>
