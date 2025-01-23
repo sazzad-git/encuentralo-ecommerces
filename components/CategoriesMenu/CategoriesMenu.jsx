@@ -35,10 +35,12 @@ const CategoriesMenu = forwardRef(function CategoriesMenu(props, ref) {
     <div
       data-aos="fade-right"
       ref={ref}
-      className="z-50 absolute top-[100%] left-0 w-[380px] border border-gray-300 bg-white rounded-r-[20px] p-5"
+      className="z-50 absolute top-[100%] left-0 w-[240px] md:w-[380px] border border-gray-300 bg-white rounded-r-[20px] p-5"
     >
-      <h4 className={`text-[24px] mb-2`}>Categorias</h4>
-      <ul className="flex flex-col gap-3">
+      <h4 className={`text-[10px] md:text-[16px] lg:text-[24px] mb-2`}>
+        Categorias
+      </h4>
+      <ul className="flex flex-col gap-1 md:gap-3 lg:gap-3">
         {[
           { name: "Ropa", icon: rupa },
           { name: "Accesorios", icon: watch },
@@ -58,10 +60,14 @@ const CategoriesMenu = forwardRef(function CategoriesMenu(props, ref) {
             className="flex items-center gap-3 text-[20px] font-bold text-[#665E5E] justify-between"
           >
             <div
-              className={`${nunito.variable} flex items-center gap-4 lg:my-[5px]`}
+              className={`${nunito.variable} flex items-center gap-2 md:gap-4 lg:gap-4 lg:my-[5px]`}
             >
               <Image width={25} src={category.icon} alt={category.name} />
-              <span className={`${nunito.variable}`}>{category.name}</span>
+              <span
+                className={`${nunito.variable} text-[10px] md:text-[16px] lg:text-[20px]`}
+              >
+                {category.name}
+              </span>
             </div>
             <Image width={24} height={24} src={add} alt="Add Icon" />
           </li>

@@ -187,7 +187,7 @@ function ProductCard({
         alt={title}
         width={300}
         height={200}
-        className="w-full md:h-[194px] lg:h-56 object-cover pt-[10px] md:mt-[29px] rounded-t-lg"
+        className="w-full h-36  md:h-[194px] lg:h-56 object-cover pt-[10px] md:mt-[29px] rounded-t-lg"
       />
       <div className="flex justify-between p-2 lg:p-4 relative min-h-[50px] md:min-h-[70px] lg:min-h-[100px]">
         <div className="flex items-center gap-2 lg:gap-3">
@@ -195,18 +195,18 @@ function ProductCard({
             <Image src={shopLogo} alt="Shop Logo" />
           </div>
           <div className="leading-0 lg:leading-[125%]">
-            <h4 className="text-[10px] md:text-[13px] lg:text-[20px]">
+            <h4 className="text-[7px] md:text-[13px] lg:text-[20px]">
               {title}
             </h4>
             <p
-              className={`${nunito.variable} font-sans capitalize lg:mt-2 text-[8px] md:text-[10px] lg:text-[13px]`}
+              className={`${nunito.variable} font-sans capitalize lg:mt-2 text-[5px] md:text-[10px] lg:text-[13px]`}
             >
               {title2}
             </p>
           </div>
         </div>
 
-        <div className="absolute top-2 right-2 flex items-center justify-end gap-1 lg:top-[38%] lg:-translate-y-1/2">
+        <div className="absolute top-2 pt-[5px] right-2 flex items-center justify-end gap-1 lg:top-[38%] lg:-translate-y-1/2">
           <div className="w-[12px] h-[13px] md:w-[16px] md:h-[16px] lg:w-[22px] lg:h-[24px] border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer">
             <MdOutlineHome className="text-[10px] md:text-[13px] lg:text-[16px] text-[#BF8937]" />
           </div>
