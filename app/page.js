@@ -14,7 +14,9 @@ export default function Home() {
     <main>
       <Header></Header>
       <Navbar></Navbar>
-      <HeroSection></HeroSection>
+      <div class="overflow-hidden">
+        <HeroSection></HeroSection>
+      </div>
       <Categories></Categories>
 
       <Destacados></Destacados>

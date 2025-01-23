@@ -90,18 +90,18 @@ export default function HeroSection() {
   return (
     <div
       data-aos="zoom-out"
-      className="relative h-[34vh] md:h-[85vh] lg:h-[65vh] bg-cover bg-center mb-[20px] md:mb-[160px] lg:mb-[237px] bg-no-repeat bg-[#DFDFDF] md:bg-[url('/hero/Hero.png')]"
+      className="h-[38vh] md:h-[85vh] lg:h-[65vh] bg-cover bg-center bg-no-repeat bg-[#DFDFDF] md:bg-[url('/hero/Hero.png')] mb-5 md:mb-40 lg:mb-60"
     >
-      <div className="absolute inset-0 md:bg-black md:bg-opacity-40 flex flex-col items-center">
-        <h1 className="text-black font-bridone md:text-white text-xl md:text-5xl lg:text-[64px] font-bold text-center mt-[11px] mb-2 md:mt-[80px] md:mb-[80px]">
+      <div className="h-[94%] md:h-full flex flex-col items-center justify-center md:bg-black md:bg-opacity-40">
+        <h1 className="text-black md:text-white text-xl md:text-5xl lg:text-6xl font-bold text-center mb-1 md:mb-20">
           EMPRENDIMIENTOS DESTACADOS
         </h1>
         <div
           data-aos="flip-down"
-          className="md:w-11/12 sm:w-full max-w-7xl bg-opacity-90 rounded-lg p-0 md:p-4"
+          className="w-full max-w-7xl bg-opacity-90 rounded-lg p-0 md:p-4 md:-mb-[13rem]"
         >
           {/* Desktop View */}
-          <div className="hidden md:block relative">
+          <div className="hidden md:block">
             <Swiper
               modules={[Navigation]}
               navigation={{
@@ -114,9 +114,9 @@ export default function HeroSection() {
               centeredSlides={true}
               loop={true}
               onSlideChange={handleSlideChange}
-              className="md:max-w-[1111px] lg:max-w-[1161px]"
+              className="max-w-[1111px] lg:max-w-[1161px]"
             >
-              {products.map((product, index) => (
+              {products.map((product) => (
                 <SwiperSlide key={product.id}>
                   {({ isActive, isNext, isPrev }) => (
                     <ProductCard
@@ -130,17 +130,17 @@ export default function HeroSection() {
               ))}
             </Swiper>
 
-            <div className="custom-swiper-button-prev absolute lg:left-[-50px] md:left-[-40px] bottom-[75px] transform -translate-y-1/2 z-10 cursor-pointer">
+            <div className="custom-swiper-button-prev absolute left-[-40px] lg:left-[-50px] bottom-[75px] transform -translate-y-1/2 z-10 cursor-pointer">
               <Image src={GroupLeft} width={35} height={35} alt="Previous" />
             </div>
 
-            <div className="custom-swiper-button-next absolute lg:right-[-50px] md:right-[-40px] bottom-[75px] transform -translate-y-1/2 z-10 cursor-pointer">
+            <div className="custom-swiper-button-next absolute right-[-40px] lg:right-[-50px] bottom-[75px] transform -translate-y-1/2 z-10 cursor-pointer">
               <Image src={GroupRight} width={35} height={35} alt="Next" />
             </div>
           </div>
 
           {/* Mobile View */}
-          <div className="md:hidden mx-2 grid grid-cols-2 gap-2">
+          <div className="md:hidden grid grid-cols-2 gap-2 mx-2">
             {products.slice(0, 2).map((product) => (
               <ProductCard
                 key={product.id}
