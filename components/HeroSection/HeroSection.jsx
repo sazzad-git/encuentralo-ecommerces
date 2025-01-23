@@ -213,9 +213,6 @@ function ProductCard({
           <div className="w-[12px] h-[13px] md:w-[16px] md:h-[16px] lg:w-[22px] lg:h-[24px] border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer">
             <LuTruck className="text-[10px] md:text-[13px] lg:text-[16px] text-[#BF8937]" />
           </div>
-          <div className="w-[12px] h-[13px] md:w-[16px] md:h-[16px] lg:w-[22px] lg:h-[24px] border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer">
-            <MdOutlineRecycling className="text-[10px] md:text-[13px] lg:text-[16px] text-[#BF8937]" />
-          </div>
         </div>
       </div>
     </div>
