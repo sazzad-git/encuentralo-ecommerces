@@ -90,7 +90,7 @@ export default function HeroSection() {
   return (
     <div
       data-aos="zoom-out"
-      className="relative h-[30vh] md:h-[85vh] lg:h-[65vh] bg-cover bg-center mb-[20px] md:mb-[160px] lg:mb-[237px] bg-no-repeat bg-[#DFDFDF] md:bg-[url('/hero/Hero.png')]"
+      className="relative h-[34vh] md:h-[85vh] lg:h-[65vh] bg-cover bg-center mb-[20px] md:mb-[160px] lg:mb-[237px] bg-no-repeat bg-[#DFDFDF] md:bg-[url('/hero/Hero.png')]"
     >
       <div className="absolute inset-0 md:bg-black md:bg-opacity-40 flex flex-col items-center">
         <h1 className="text-black font-bridone md:text-white text-xl md:text-5xl lg:text-[64px] font-bold text-center mt-[11px] mb-2 md:mt-[80px] md:mb-[80px]">
@@ -192,7 +192,7 @@ function ProductCard({
       <div className="flex justify-between p-0 md:p-2 lg:p-4 relative min-h-[45px] md:min-h-[70px] lg:min-h-[100px]">
         <div className="flex items-center gap-1 md:gap-2 lg:gap-3">
           <div className="w-[25px] h-[25px] md:w-[35px] md:h-[35px] lg:w-[52px] lg:h-[52px] rounded-full">
-            <Image src={shopLogo} alt="Shop Logo" />
+            <Image className="aspect-square" src={shopLogo} alt="Shop Logo" />
           </div>
           <div className="leading-0 lg:leading-[125%]">
             <h4 className="text-[6px] font-bridone md:text-[13px] lg:text-[20px]">
