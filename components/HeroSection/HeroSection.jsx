@@ -8,9 +8,9 @@ import "swiper/css/navigation";
 import img1 from "@/public/hero/img1.png";
 import img2 from "@/public/hero/img2.png";
 import img3 from "@/public/hero/img3.png";
-import hero1 from "../../public/Poleronchampionblue1.png";
-import hero2 from "../../public/hero/hero2.png";
-import hero3 from "../../public/hero/hero3.png";
+import hero1 from "../../public/hero/hero1.jpg";
+import hero2 from "../../public/hero/hero2.jpg";
+import hero3 from "../../public/hero/hero3.jpg";
 import GroupRight from "@/public/hero/GrpupRight.svg";
 import GroupLeft from "@/public/hero/GroupLeft.svg";
 import { MdOutlineHome, MdOutlineRecycling } from "react-icons/md";
@@ -35,14 +35,14 @@ const products = [
   },
   {
     id: 2,
-    image: hero1,
+    image: hero2,
     title: "Impulsonaturaltienda",
     title2: "Proteinas, Vitaminas, Minerales",
     shopLogo: img2,
   },
   {
     id: 3,
-    image: hero1,
+    image: hero3,
     title: "5ave.nue",
     title2: "Camisetas, Sudaderas, Pantalones",
     shopLogo: img3,
@@ -56,14 +56,14 @@ const products = [
   },
   {
     id: 5,
-    image: hero1,
+    image: hero3,
     title: "Impulsonaturaltienda",
     title2: "Proteinas, Vitaminas, Minerales",
     shopLogo: img2,
   },
   {
     id: 6,
-    image: hero1,
+    image: hero2,
     title: "5ave.nue",
     title2: "Camisetas, Sudaderas, Pantalones",
     shopLogo: img3,
@@ -169,7 +169,7 @@ function ProductCard({
   const cardStyle = {
     transform: `
       ${isFirst ? "rotate(-3deg) translateX(15px) scale(0.9)" : ""}
-      ${isActive ? "translateY(-15px) scale(0.9)" : ""}
+      ${isActive ? "translateY(-11px) scale(0.9)" : ""}
       ${isLast ? "rotate(3deg) translateX(-15px) scale(0.9)" : ""}
     `,
     transition: "all 0.3s ease-in-out",
@@ -179,7 +179,7 @@ function ProductCard({
 
   return (
     <div
-      className="flex-shrink-0 sm:w-[185px] sm:h-[190px] md:mt-[-25px] lg:mt-0  md:h-[256px] lg:h-[320px] md:w-full  lg:w-full bg-gray-200 rounded-lg shadow-md m-2 md:m-0 px-2 overflow-visible"
+      className="flex-shrink-0 bg-[#FAFAFA] sm:w-[185px] sm:h-[190px] md:mt-[-25px] lg:mt-0  md:h-[256px] lg:h-[320px] md:w-full  lg:w-full rounded-lg shadow-md m-2 md:m-0 px-2 overflow-visible"
       style={cardStyle}
     >
       <Image
