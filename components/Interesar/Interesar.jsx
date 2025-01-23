@@ -108,12 +108,16 @@ export default function Interesar() {
                       <Image src={shopLogo} alt="Shop Logo" />
                     </div>
                     <div className="leading-0 lg:leading-[125%]">
-                      <h4 className="text-[10px] md:text-[13px] lg:text-[16px]">
+                      <h4 className="text-[10px] font-bridone md:text-[13px] lg:text-[16px]">
                         Aress.Cl
                       </h4>
-                      <p className="text-[9px] md:text-[11px] lg:text-[14px] font-bold text-[#A06205]">
-                        Accesorios{" "}
-                        <span className="font-normal">/ Joyería</span>
+                      <p
+                        className={`text-[9px] md:text-[12px] lg:text-[16px] font-bold text-[#A06205] ${nunito.variable}`}
+                      >
+                        Accesorios
+                        <span className={`font-normal ${nunito.variable}`}>
+                          / Joyería
+                        </span>
                       </p>
                     </div>
                   </div>

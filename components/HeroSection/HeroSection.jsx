@@ -195,7 +195,7 @@ function ProductCard({
             <Image src={shopLogo} alt="Shop Logo" />
           </div>
           <div className="leading-0 lg:leading-[125%]">
-            <h4 className="text-[7px] md:text-[13px] lg:text-[20px]">
+            <h4 className="text-[7px] font-bridone md:text-[13px] lg:text-[20px]">
               {title}
             </h4>
             <p

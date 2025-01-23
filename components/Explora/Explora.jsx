@@ -17,6 +17,14 @@ import {
 } from "@/components/ui/carousel";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Nunito } from "next/font/google";
+
+// nomito font
+const nunito = Nunito({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-nunito",
+});
 
 export default function SimpleSlider() {
   const data = [
@@ -107,12 +115,16 @@ export default function SimpleSlider() {
                       <Image src={shopLogo} alt="Shop Logo" />
                     </div>
                     <div className="leading-0 lg:leading-[125%]">
-                      <h4 className="text-[10px] md:text-[13px] lg:text-[20px]">
+                      <h4 className="text-[10px] font-bridone md:text-[13px] lg:text-[20px]">
                         Aress.Cl
                       </h4>
-                      <p className="lg:mt-1 text-[9px] md:text-[11px] lg:text-[16px] font-bold text-[#A06205]">
-                        Accesorios{" "}
-                        <span className="font-normal">/ Joyería</span>
+                      <p
+                        className={`text-[9px] md:text-[12px] lg:text-[16px] font-bold text-[#A06205] ${nunito.variable}`}
+                      >
+                        Accesorios
+                        <span className={`font-normal ${nunito.variable}`}>
+                          / Joyería
+                        </span>
                       </p>
                     </div>
                   </div>

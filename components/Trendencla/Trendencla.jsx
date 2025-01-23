@@ -12,6 +12,13 @@ import { LuTruck } from "react-icons/lu";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Nunito } from "next/font/google";
+
+const nunito = Nunito({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-nunito",
+});
 
 export default function Trendencla() {
   const items = [1, 2];
@@ -43,12 +50,16 @@ export default function Trendencla() {
                       <Image src={begLogo} alt="Shop Logo" />
                     </div>
                     <div className="leading-0 lg:leading-[125%]">
-                      <h4 className="text-[10px] md:text-[13px] lg:text-[20px]">
+                      <h4 className="text-[10px] font-bridone md:text-[13px] lg:text-[20px]">
                         Aress.Cl
                       </h4>
-                      <p className="text-[9px] md:text-[11px] lg:text-[16px] lg:mt-1 font-bold text-[#A06205]">
-                        Accesorios{" "}
-                        <span className="font-normal">/ Joyería</span>
+                      <p
+                        className={`text-[9px] md:text-[12px] lg:text-[16px] font-bold text-[#A06205] ${nunito.variable}`}
+                      >
+                        Accesorios
+                        <span className={`font-normal ${nunito.variable}`}>
+                          / Joyería
+                        </span>
                       </p>
                     </div>
                   </div>
@@ -104,7 +115,9 @@ export default function Trendencla() {
                 </div>
 
                 <p className="px-1 py-8 text-center text-[16px]">
-                  <span className="cursor-pointer">Bolsos, Moda, Abrigos</span>
+                  <span className={`cursor-pointer ${nunito.variable}`}>
+                    Bolsos, Moda, Abrigos
+                  </span>
                 </p>
               </div>
             ))}

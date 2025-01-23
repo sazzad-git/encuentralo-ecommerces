@@ -151,7 +151,7 @@ export default function Destacados() {
                       <Image src={shopLogo} alt="Shop Logo" />
                     </div>
                     <div className="leading-0 lg:leading-[125%]">
-                      <h4 className="text-[10px] md:text-[13px] lg:text-[20px]">
+                      <h4 className="text-[10px] font-bridone md:text-[13px] lg:text-[20px]">
                         Aress.Cl
                       </h4>
                       <p
