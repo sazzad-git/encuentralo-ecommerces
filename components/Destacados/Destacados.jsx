@@ -29,6 +29,9 @@ export default function Destacados() {
     { id: 1, img: img, thumbnails: [img, imgOne, c, d] },
     { id: 2, img: imgOne, thumbnails: [img, imgOne, c, d] },
     { id: 3, img: imgTwo, thumbnails: [img, imgOne, c, d] },
+    { id: 4, img: img, thumbnails: [img, imgOne, c, d] },
+    { id: 5, img: imgTwo, thumbnails: [img, imgOne, c, d] },
+    { id: 6, img: imgOne, thumbnails: [img, imgOne, c, d] },
   ];
 
   // State to store the selected image for each card
