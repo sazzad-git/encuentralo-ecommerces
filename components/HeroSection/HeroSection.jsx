@@ -92,7 +92,7 @@ export default function HeroSection() {
   return (
     <div
       data-aos="zoom-out"
-      className="h-[36vh] md:h-[85vh] lg:h-[65vh] bg-cover bg-center bg-no-repeat bg-[#DFDFDF] md:bg-[url('/hero/Hero.png')] mb-5 md:mb-40 lg:mb-60"
+      className="h-[36vh]  md:h-[65vh] bg-cover bg-center bg-no-repeat bg-[#DFDFDF] md:bg-[url('/hero/Hero.png')] mb-5 md:mb-60"
     >
       <div className="h-[94%] md:h-full flex flex-col items-center justify-center md:bg-black md:bg-opacity-40">
         <h1 className="text-black md:text-white text-xl md:text-5xl lg:text-6xl font-bold text-center mb-1 md:mb-20">
@@ -116,7 +116,7 @@ export default function HeroSection() {
               centeredSlides={true}
               loop={true}
               onSlideChange={handleSlideChange}
-              className="max-w-[1111px] lg:max-w-[1161px]"
+              className="max-w-[1111px] md:max-w-[1161px]"
             >
               {products.map((product) => (
                 <SwiperSlide key={product.id}>
