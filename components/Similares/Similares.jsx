@@ -55,7 +55,7 @@ export default function Similares() {
   return (
     <div
       data-aos="fade-up-left"
-      className="custom-container py-5 hidden lg:block lg:mb-[61px]"
+      className="custom-container py-5  lg:mb-[61px]"
     >
       <div className="flex items-center justify-between pb-2 md:pb-4 lg:pb-6 lg:mb-[32px]">
         <h2

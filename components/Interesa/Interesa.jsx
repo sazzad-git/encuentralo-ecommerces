@@ -1,6 +1,6 @@
 import Image from "next/image";
 import heart from "@/public/accessories/heart.svg";
-import currency from "@/public/accessories/Currency.svg";
+import currency from "@/public/accessories/dollar.svg";
 import image from "@/public/accessories/image.png";
 import image2 from "@/public/accessories/image2.png";
 import image3 from "@/public/accessories/image3.png";
@@ -55,8 +55,8 @@ const Interesa = () => {
   ];
 
   return (
-    <div className="md:px-[179px] mb-[70px] mt-3 md:mb-[47px] px-[10px]">
-      <div className="grid grid-cols-3 gap-[19px] sm:grid-cols-3 md:grid-cols-4">
+    <div className="md:w-[1160px] mx-auto mb-[70px] mt-3 md:mb-[47px] px-[8px]">
+      <div className="grid grid-cols-3 gap-2  md:gap-[19px] sm:grid-cols-3 md:grid-cols-4">
         {data.map((item) => (
           <div
             key={item.id}

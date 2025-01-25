@@ -1,3 +1,5 @@
+import Ceache from "@/components/Ceache/Ceache";
+import Comida from "@/components/Comida/Comida";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import Interesa from "@/components/Interesa/Interesa";
@@ -11,10 +13,15 @@ const page = () => {
       <Header></Header>
 
       <Navbar></Navbar>
+      <Ceache></Ceache>
+
+      <Comida></Comida>
 
       <Interesa></Interesa>
 
-      <Similares></Similares>
+      <div className="overflow-hidden">
+        <Similares></Similares>
+      </div>
 
       <Footer></Footer>
     </main>

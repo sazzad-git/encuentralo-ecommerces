@@ -21,7 +21,9 @@ const page = () => {
 
       <Recomendamos></Recomendamos>
 
-      <Similares></Similares>
+      <div className="overflow-hidden">
+        <Similares></Similares>
+      </div>
 
       <Footer></Footer>
     </main>

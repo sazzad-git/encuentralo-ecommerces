@@ -79,7 +79,7 @@ export default function Mejores() {
       </div>
 
       {/* Swiper Slider */}
-      <div className="md:px-[100px] md:mb-[47px] px-[10px] pr-[2px]">
+      <div className="md:px-[100px] md:mb-[47px] px-[8px] ">
         <Swiper
           loop={true}
           spaceBetween={30}
@@ -92,7 +92,7 @@ export default function Mejores() {
           breakpoints={{
             320: {
               slidesPerView: 2,
-              spaceBetween: 10,
+              spaceBetween: 8,
             },
             768: {
               slidesPerView: 2,
@@ -107,11 +107,11 @@ export default function Mejores() {
           {data.map((card, index) => (
             <SwiperSlide key={card.id}>
               <div
-                className={` border rounded-[8px] bg-white overflow-hidden ${
+                className={` border  rounded-[8px] bg-white overflow-hidden ${
                   index === activeFirstIndex + 1
-                    ? "md:h-[451px] md:w-[390px]" // Larger size for active card
-                    : "md:h-[407px] md:w-[389px]" // Default size for other cards
-                } h-[233px] w-[185px]`}
+                    ? "md:h-[451px] md:w-[390px]  md:transform md:translate-y-[-20px]" // Larger size for active card
+                    : "md:h-[407px]  md:w-[389px]" // Default size for other cards
+                } h-[233px] w-[180px] md:mt-5`}
               >
                 {/* className="w-full h-[166px] md:h-[230px] lg:h-[281px]" */}
                 <div
