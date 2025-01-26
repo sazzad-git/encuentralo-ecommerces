@@ -2,7 +2,6 @@ import Image from "next/image";
 import shopLogo from "@/public/images/shoplogo.png";
 import { MdOutlineHome } from "react-icons/md";
 import { LuTruck } from "react-icons/lu";
-import React, { useState, useEffect } from "react";
 import img from "@/public/Poleronchampionblue1.png";
 import imgOne from "@/public/clothing_01.png";
 import imgTwo from "@/public/clothing_02.png";

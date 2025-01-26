@@ -86,7 +86,7 @@ export default function HeroSection() {
   return (
     <div className="h-[27vh]  md:h-[50vh] bg-cover bg-center bg-no-repeat bg-[#DFDFDF] md:bg-[url('/hero/Hero.png')] mb-5 md:mb-36">
       <div className="h-[94%] md:h-full flex flex-col items-center justify-center md:bg-black md:bg-opacity-40">
-        <h1 className="text-black md:text-white text-xl md:text-5xl lg:text-6xl font-bold text-center  md:mt-2 ">
+        <h1 className="text-black md:text-white text-xl md:text-5xl md:mb-5 lg:text-6xl font-bold text-center  md:mt-2 ">
           EMPRENDIMIENTOS DESTACADOS
         </h1>
         <div
@@ -103,7 +103,7 @@ export default function HeroSection() {
               }}
               style={customNavigation}
               slidesPerView={3}
-              spaceBetween={1}
+              spaceBetween={30}
               centeredSlides={true}
               loop={true}
               onSlideChange={handleSlideChange}
@@ -123,11 +123,11 @@ export default function HeroSection() {
               ))}
             </Swiper>
 
-            <div className="custom-swiper-button-prev absolute left-[-40px] lg:left-[50px] bottom-[20px] transform -translate-y-1/2 z-10 cursor-pointer">
+            <div className="custom-swiper-button-prev absolute left-[-40px] lg:left-[50px] bottom-[170px] transform -translate-y-1/2 z-10 cursor-pointer">
               <Image src={GroupLeft} width={35} height={35} alt="Previous" />
             </div>
 
-            <div className="custom-swiper-button-next absolute right-[-40px] lg:right-[50px] bottom-[20px] transform -translate-y-1/2 z-10 cursor-pointer">
+            <div className="custom-swiper-button-next absolute right-[-40px] lg:right-[50px] bottom-[170px] transform -translate-y-1/2 z-10 cursor-pointer">
               <Image src={GroupRight} width={35} height={35} alt="Next" />
             </div>
           </div>
@@ -150,37 +150,15 @@ export default function HeroSection() {
   );
 }
 
-function ProductCard({
-  image,
-  title,
-  isActive,
-  isFirst,
-  isLast,
-  title2,
-  shopLogo,
-}) {
-  const cardStyle = {
-    transform: `
-      ${isFirst ? "rotate(-3deg) translateX(15px) scale(0.9)" : ""}
-      ${isActive ? "translateY(-11px) scale(0.9)" : ""}
-      ${isLast ? "rotate(3deg) translateX(-15px) scale(0.9)" : ""}
-    `,
-    transition: "all 0.3s ease-in-out",
-    backfaceVisibility: "hidden",
-    WebkitBackfaceVisibility: "hidden",
-  };
-
+function ProductCard({ image, title, title2, shopLogo }) {
   return (
-    <div
-      className="flex-shrink-0 bg-[#FAFAFA] sm:w-[185px] sm:h-[170px] md:mt-[-25px] lg:mt-0  md:h-[256px] lg:h-[320px] md:w-full  lg:w-full rounded-lg shadow-md m-1 md:m-0 px-2 overflow-visible"
-      style={cardStyle}
-    >
+    <div className="flex-shrink-0 bg-[#FAFAFA] sm:w-[185px] sm:h-[170px] md:mt-[-25px] lg:mt-0 md:h-[256px] lg:h-[320px] md:w-full lg:w-full rounded-lg shadow-md m-1 md:m-0 px-2 overflow-visible border border-gray-300">
       <Image
         src={image}
         alt={title}
         width={360}
         height={200}
-        className="w-full h-36  md:h-[194px] lg:h-56 object-cover pt-[10px] md:mt-[29px] rounded-t-lg"
+        className="w-full h-36 md:h-[194px] lg:h-56 object-cover pt-2 md:mt-0 rounded-t-lg"
       />
       <div className="flex justify-between p-0 md:p-2 lg:p-4 relative min-h-[45px] md:min-h-[70px] lg:min-h-[100px]">
         <div className="flex items-center gap-1 md:gap-2 lg:gap-3">
@@ -202,11 +180,9 @@ function ProductCard({
         <div className="absolute top-2 pt-[5px] right-2 flex items-center justify-end gap-1 lg:top-[38%] lg:-translate-y-1/2">
           <div className="w-[12px] h-[13px] md:w-[16px] md:h-[16px] lg:w-[22px] lg:h-[24px] border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer">
             <Image src={Mask} width={12} height={13} alt="Mask" />
-            {/* <MdOutlineHome className="text-[10px] md:text-[13px] lg:text-[16px] text-[#BF8937]" /> */}
           </div>
           <div className="w-[12px] h-[13px] md:w-[16px] md:h-[16px] lg:w-[22px] lg:h-[24px] border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer">
             <Image src={car} width={12} height={13} alt="Car" />
-            {/* <LuTruck className="text-[10px] md:text-[13px] lg:text-[16px] text-[#BF8937]" /> */}
           </div>
         </div>
       </div>

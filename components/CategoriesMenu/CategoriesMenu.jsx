@@ -1,4 +1,10 @@
-import add from "@/public/icon/add.svg";
+"use client";
+
+import React, { useState, useRef, useEffect } from "react";
+import Image from "next/image";
+import { Nunito } from "next/font/google";
+
+import add from "@/public/arrow.svg";
 import rupa from "@/public/icon/rupa.svg";
 import watch from "@/public/icon/watch.svg";
 import calzado from "@/public/icon/calzado.svg";
@@ -12,10 +18,6 @@ import tv from "@/public/icon/tv.svg";
 import world from "@/public/icon/world.svg";
 import edit from "@/public/icon/edit.svg";
 
-import { Nunito } from "next/font/google";
-import Image from "next/image";
-
-// i need nonito font
 const nunito = Nunito({
   weight: "400",
   subsets: ["latin"],
@@ -23,43 +25,151 @@ const nunito = Nunito({
 });
 
 export default function CategoriesMenu() {
+  const [hoveredCategory, setHoveredCategory] = useState(0);
+  const [isSubMenuHovered, setIsSubMenuHovered] = useState(false);
+  const timeoutRef = useRef(200);
+
   const data = [
-    { name: "Ropa", icon: rupa },
-    { name: "Accesorios", icon: watch },
-    { name: "Calzado", icon: calzado },
-    { name: "Cuidado Personal", icon: shower },
-    { name: "Hogar y decoración", icon: house },
-    { name: "Mascotas", icon: dog },
-    { name: "Niño y Bebé", icon: kid },
-    { name: "Consumibles", icon: coffee },
-    { name: "Tecnología", icon: device },
-    { name: "Ocio", icon: tv },
-    { name: "Deporte", icon: world },
-    { name: "General", icon: edit },
+    {
+      name: "Ropa",
+      icon: rupa,
+      subcategory: ["Casual", "Formal", "Poleras", "Pantalones"],
+    },
+    {
+      name: "Accesorios",
+      icon: watch,
+      subcategory: ["Casual", "Formal", "Poleras", "Pantalones"],
+    },
+    {
+      name: "Calzado",
+      icon: calzado,
+      subcategory: ["Casual", "Formal", "Poleras", "Pantalones"],
+    },
+    {
+      name: "Cuidado Personal",
+      icon: shower,
+      subcategory: ["Casual", "Formal", "Poleras", "Pantalones"],
+    },
+    {
+      name: "Hogar y decoración",
+      icon: house,
+      subcategory: ["Casual", "Formal", "Poleras", "Pantalones"],
+    },
+    {
+      name: "Mascotas",
+      icon: dog,
+      subcategory: ["Casual", "Formal", "Poleras", "Pantalones"],
+    },
+    {
+      name: "Niño y Bebé",
+      icon: kid,
+      subcategory: ["Casual", "Formal", "Poleras", "Pantalones"],
+    },
+    {
+      name: "Consumibles",
+      icon: coffee,
+      subcategory: ["Casual", "Formal", "Poleras", "Pantalones"],
+    },
+    {
+      name: "Tecnología",
+      icon: device,
+      subcategory: ["Casual", "Formal", "Poleras", "Pantalones"],
+    },
+    {
+      name: "Ocio",
+      icon: tv,
+      subcategory: ["Casual", "Formal", "Poleras", "Pantalones"],
+    },
+    {
+      name: "Deporte",
+      icon: world,
+      subcategory: ["Casual", "Formal", "Poleras", "Pantalones"],
+    },
+    {
+      name: "General",
+      icon: edit,
+      subcategory: ["Casual", "Formal", "Poleras", "Pantalones"],
+    },
   ];
 
+  const handleMouseEnter = (index) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    setHoveredCategory(index);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      if (!isSubMenuHovered) {
+        setHoveredCategory(null);
+      }
+    }, 100);
+  };
+
+  const handleSubMenuMouseEnter = () => {
+    setIsSubMenuHovered(true);
+  };
+
+  const handleSubMenuMouseLeave = () => {
+    setIsSubMenuHovered(false);
+    handleMouseLeave();
+  };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="z-50 absolute top-[100%] left-0 w-[240px] md:w-[380px] border border-gray-300 bg-white rounded-[20px] p-5">
-      <h4 className={`text-[10px] md:text-[16px] lg:text-[24px] mb-2`}>
-        Categorias
-      </h4>
+    <div
+      className={`${nunito.variable} z-50 absolute top-[100%] left-0 w-[240px] md:w-[380px] border border-gray-300 bg-white rounded-[20px] p-5`}
+    >
+      <h4 className="text-[10px] md:text-[20px]  mb-2">Categorias</h4>
       <ul className="flex flex-col gap-1 md:gap-3 lg:gap-3">
         {data.map((category, index) => (
           <li
             key={index}
-            className="flex items-center gap-3 text-[20px] font-bold text-[#665E5E] justify-between"
+            className="relative"
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
           >
-            <div
-              className={`${nunito.variable} flex items-center gap-2 md:gap-4 lg:gap-4 lg:my-[5px]`}
-            >
-              <Image width={25} src={category.icon} alt={category.name} />
-              <span
-                className={`${nunito.variable} text-[10px] md:text-[16px] lg:text-[20px]`}
-              >
-                {category.name}
-              </span>
+            <div className="flex items-center gap-3 text-[20px] font-bold text-[#665E5E] justify-between cursor-pointer">
+              <div className="flex items-center gap-2 md:gap-2 md:my-[2px] ">
+                <Image
+                  width={25}
+                  height={25}
+                  src={category.icon}
+                  alt={category.name}
+                />
+                <span className="text-[10px] md:text-[16px] ">
+                  {category.name}
+                </span>
+              </div>
+              <Image width={24} height={24} src={add} alt="Add Icon" />
             </div>
-            <Image width={24} height={24} src={add} alt="Add Icon" />
+
+            {hoveredCategory === index && (
+              <div
+                className="absolute left-full top-0 ml-2 bg-white border border-gray-300 rounded-lg shadow-lg z-50"
+                onMouseEnter={handleSubMenuMouseEnter}
+                onMouseLeave={handleSubMenuMouseLeave}
+              >
+                <ul className="py-2">
+                  {category.subcategory.map((subcat, subIndex) => (
+                    <li
+                      key={subIndex}
+                      className="px-4 py-2 hover:bg-gray-100 text-[10px] md:text-[14px] lg:text-[16px] cursor-pointer"
+                    >
+                      {subcat}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </li>
         ))}
       </ul>
