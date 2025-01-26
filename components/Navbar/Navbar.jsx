@@ -13,7 +13,7 @@ export default function Navbar() {
     <div className="navbar relative border-b border-[#cacaca] bg-white">
       <div className="custom-container">
         <div className="navbar-head">
-          <ul className="flex items-center justify-center gap-0 md:gap-4 h-[68px]">
+          <ul className="flex items-center justify-center gap-0 md:gap-4 h-[40px] md:h-[50px]">
             <li className="relative group">
               {/* Button for hover */}
               <button className="py-1 pe-3 md:pe-4 lg:pe-5 flex items-center gap-1 capitalize text-gray-500 text-[10px] md:text-[14px] lg:text-[18px] hover:text-[#A06205]">

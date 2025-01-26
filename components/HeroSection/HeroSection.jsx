@@ -84,9 +84,9 @@ export default function HeroSection() {
   };
 
   return (
-    <div className="h-[36vh]  md:h-[65vh] bg-cover bg-center bg-no-repeat bg-[#DFDFDF] md:bg-[url('/hero/Hero.png')] mb-5 md:mb-60">
+    <div className="h-[27vh]  md:h-[50vh] bg-cover bg-center bg-no-repeat bg-[#DFDFDF] md:bg-[url('/hero/Hero.png')] mb-5 md:mb-36">
       <div className="h-[94%] md:h-full flex flex-col items-center justify-center md:bg-black md:bg-opacity-40">
-        <h1 className="text-black md:text-white text-xl md:text-5xl lg:text-6xl font-bold text-center mb-1 md:mb-20">
+        <h1 className="text-black md:text-white text-xl md:text-5xl lg:text-6xl font-bold text-center  md:mt-2 ">
           EMPRENDIMIENTOS DESTACADOS
         </h1>
         <div
@@ -123,11 +123,11 @@ export default function HeroSection() {
               ))}
             </Swiper>
 
-            <div className="custom-swiper-button-prev absolute left-[-40px] lg:left-[-50px] bottom-[75px] transform -translate-y-1/2 z-10 cursor-pointer">
+            <div className="custom-swiper-button-prev absolute left-[-40px] lg:left-[50px] bottom-[20px] transform -translate-y-1/2 z-10 cursor-pointer">
               <Image src={GroupLeft} width={35} height={35} alt="Previous" />
             </div>
 
-            <div className="custom-swiper-button-next absolute right-[-40px] lg:right-[-50px] bottom-[75px] transform -translate-y-1/2 z-10 cursor-pointer">
+            <div className="custom-swiper-button-next absolute right-[-40px] lg:right-[50px] bottom-[20px] transform -translate-y-1/2 z-10 cursor-pointer">
               <Image src={GroupRight} width={35} height={35} alt="Next" />
             </div>
           </div>

@@ -38,7 +38,7 @@ export default function Header() {
   return (
     <div className="bg-white border-b border-[#cacaca]">
       <div className="custom-container">
-        <div className="header-head flex items-center h-auto md:h-[100px] py-3 md:py-0 justify-between gap-3">
+        <div className="header-head flex items-center h-auto md:h-[50px] py-3 md:py-0 justify-between gap-3">
           {/* Logo */}
           <div className="logo-box">
             <Image
@@ -49,7 +49,7 @@ export default function Header() {
           </div>
 
           {/* Search Box */}
-          <div className="search-box relative w-[70%] md:w-[600px] h-[25px] md:h-[50px] pe-8 md:pe-24 border border-[#cacaca] rounded-full md:rounded-lg ms-0 md:ms-10">
+          <div className="search-box relative w-[70%] md:w-[600px] h-[25px] md:h-[40px] pe-8 md:pe-24 border border-[#cacaca] rounded-full md:rounded-lg ms-0 md:ms-10">
             <input
               className="ps-8 pe-8 md:ps-12 w-full absolute top-0 left-0 h-full text-[10px] md:text-base outline-none rounded-full md:rounded-lg"
               type="text"
@@ -97,7 +97,7 @@ export default function Header() {
               />
             </div>
 
-            <Button className="ml-10 h-[52px] w-[150px] overflow-hidden bg-[#E8B30A] hover:bg-[#E8B30A] rounded-full text-base border-[1.5px] border-black text-black">
+            <Button className="ml-10 h-[42px] w-[120px] overflow-hidden bg-[#E8B30A] hover:bg-[#E8B30A] rounded-full text-base border-[1.5px] border-black text-black">
               Únete!
             </Button>
           </div>
