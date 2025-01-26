@@ -1,6 +1,3 @@
-"use client";
-
-import { useState, useEffect, useRef } from "react";
 import CategoriesMenu from "../CategoriesMenu/CategoriesMenu";
 import { Nunito } from "next/font/google";
 
@@ -12,46 +9,22 @@ const nunito = Nunito({
 });
 
 export default function Navbar() {
-  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
-  const dropdownRef = useRef(null);
-  const toggleButtonRef = useRef(null);
-
-  // Add delay for opening the dropdown
-  const handleToggleDropdown = () => {
-    setIsDropdownVisible((prev) => !prev);
-  };
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target) &&
-        !event.target.closest(".dropdown-button")
-      ) {
-        setIsDropdownVisible(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
   return (
     <div className="navbar relative border-b border-[#cacaca] bg-white">
       <div className="custom-container">
         <div className="navbar-head">
           <ul className="flex items-center justify-center gap-0 md:gap-4 h-[68px]">
-            <li>
-              <button
-                onClick={handleToggleDropdown}
-                className="dropdown-button py-1 pe-3 md:pe-4 lg:pe-5 flex items-center gap-1 capitalize text-gray-500 text-[10px] md:text-[14px] lg:text-[18px] hover:text-[#A06205]"
-              >
+            <li className="relative group">
+              {/* Button for hover */}
+              <button className="py-1 pe-3 md:pe-4 lg:pe-5 flex items-center gap-1 capitalize text-gray-500 text-[10px] md:text-[14px] lg:text-[18px] hover:text-[#A06205]">
                 <i className="fa-solid fa-bars size-3 md:size-4 lg:size-5"></i>
                 <span className={`${nunito.variable}`}>Categorías</span>
               </button>
-              {isDropdownVisible && <CategoriesMenu ref={dropdownRef} />}
+
+              {/* Dropdown menu */}
+              <div className="absolute left-0 top-full z-50 hidden group-hover:block">
+                <CategoriesMenu />
+              </div>
             </li>
             <li>
               <a

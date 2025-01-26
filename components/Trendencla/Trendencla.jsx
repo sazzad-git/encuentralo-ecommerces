@@ -1,5 +1,3 @@
-"use client";
-
 import begLogo from "@/public/images/beg_logo.png";
 import Image from "next/image";
 import a from "@/public/images/beg_1.png";
@@ -9,9 +7,7 @@ import d from "@/public/images/beg_4.png";
 import e from "@/public/images/beg_5.png";
 import { MdOutlineHome, MdOutlineRecycling } from "react-icons/md";
 import { LuTruck } from "react-icons/lu";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
+
 import { Nunito } from "next/font/google";
 
 const nunito = Nunito({
@@ -23,16 +19,8 @@ const nunito = Nunito({
 export default function Trendencla() {
   const items = [1, 2];
 
-  // use aos animation on scroll
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
-
   return (
-    <div
-      data-aos="fade-down-right"
-      className="hidden lg:block  py-20 lg:mb-[38px]"
-    >
+    <div className="hidden lg:block  py-20 lg:mb-[38px]">
       <div className="custom-container">
         <div className="grid grid-cols-4 gap-5">
           <div className="col-span-1 bg-white flex items-center justify-center">

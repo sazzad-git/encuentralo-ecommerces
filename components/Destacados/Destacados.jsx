@@ -16,8 +16,6 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 const nunito = Nunito({
   weight: "400",
@@ -47,9 +45,6 @@ export default function Destacados() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    // use aos animation on scroll
-    Aos.init({ duration: 2000 });
-
     if (!api) return;
 
     setCurrent(api.selectedScrollSnap());
@@ -67,10 +62,7 @@ export default function Destacados() {
   };
 
   return (
-    <div
-      data-aos="fade-up-right"
-      className="custom-container py-2 lg:mb-[70px] md:mb-[30px]"
-    >
+    <div className="custom-container py-2 lg:mb-[70px] md:mb-[30px]">
       {/* 
       <div
       className="relative h-[70vh] bg-cover bg-center mb-[207px]"

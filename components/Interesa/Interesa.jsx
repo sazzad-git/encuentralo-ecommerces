@@ -55,7 +55,7 @@ const Interesa = () => {
   ];
 
   return (
-    <div className="md:w-[1160px] mx-auto mb-[70px] mt-3 md:mb-[47px] px-[8px]">
+    <div className="md:w-[1160px] mx-auto mb-[70px] mt-3 md:mb-[47px] px-[8px] md:px-0">
       <div className="grid grid-cols-3 gap-2  md:gap-[19px] sm:grid-cols-3 md:grid-cols-4">
         {data.map((item) => (
           <div

@@ -1,4 +1,3 @@
-"use client";
 import a from "@/public/images/rupa.svg";
 import b from "@/public/images/zapatos.svg";
 import c from "@/public/images/tecnologic.svg";
@@ -7,9 +6,6 @@ import e from "@/public/images/libores.svg";
 import f from "@/public/images/deporte.svg";
 import g from "@/public/images/comida.svg";
 import Image from "next/image";
-import { useEffect } from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 export default function Categories() {
   const categories = [
@@ -55,17 +51,9 @@ export default function Categories() {
     },
   ];
 
-  // use aos animation on scroll
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
-
   return (
     <>
-      <div
-        data-aos="fade-right"
-        className="categories py-2 lg:py-5 lg:mb-[74px] "
-      >
+      <div className="categories py-2 lg:py-5 lg:mb-[74px] ">
         <div className="custom-container">
           <div className="categories-head flex items-center gap-3 md:gap-5 lg:gap-8 justify-start md:justify-center overflow-x-scroll">
             {categories.map((sCategory) => (

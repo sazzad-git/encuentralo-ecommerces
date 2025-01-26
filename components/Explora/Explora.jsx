@@ -15,8 +15,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import Aos from "aos";
-import "aos/dist/aos.css";
+
 import { Nunito } from "next/font/google";
 
 // nomito font
@@ -48,9 +47,6 @@ export default function SimpleSlider() {
   );
 
   useEffect(() => {
-    // use aos animation on scroll
-    Aos.init({ duration: 2000 });
-
     if (!api) return;
 
     setCurrent(api.selectedScrollSnap());
@@ -68,10 +64,7 @@ export default function SimpleSlider() {
   };
 
   return (
-    <div
-      data-aos="fade-down-left"
-      className="custom-container py-5 hidden lg:block lg:mb-[131px] md:mb-[70px]"
-    >
+    <div className="custom-container py-5 hidden lg:block lg:mb-[131px] md:mb-[70px]">
       <div className="flex items-center justify-between pb-2 md:pb-4 lg:pb-6 lg:mb-[54px]">
         <h2
           className={` text-[14px] font-bridone md:text-[18px] lg:text-[40px] text-[#222222]`}

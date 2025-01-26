@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import shopLogo from "@/public/images/shoplogo.png";
 import { MdOutlineHome } from "react-icons/md";
@@ -12,8 +11,6 @@ import imgFour from "@/public/images/destacados_2.png";
 import victor2 from "@/public/hero/Vector2.svg";
 
 import { Nunito } from "next/font/google";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 const nunito = Nunito({
   weight: "400",
@@ -33,16 +30,8 @@ export default function Recomendamos() {
     { id: 8, img: imgFour },
   ];
 
-  useEffect(() => {
-    // use aos animation on scroll
-    Aos.init({ duration: 2000 });
-  }, []);
-
   return (
-    <div
-      data-aos="fade-up-left"
-      className="custom-container py-5 hidden lg:block lg:mb-[61px]"
-    >
+    <div className="custom-container py-5 hidden lg:block lg:mb-[61px]">
       <div className="flex items-center justify-between pb-2 md:pb-4 lg:pb-6 lg:mb-[32px]">
         <h2
           className={` font-bridone text-[14px] md:text-[18px] lg:text-[40px] text-[#222222]`}

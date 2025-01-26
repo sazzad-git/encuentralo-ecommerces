@@ -1,4 +1,3 @@
-"use client";
 import add from "@/public/icon/add.svg";
 import rupa from "@/public/icon/rupa.svg";
 import watch from "@/public/icon/watch.svg";
@@ -12,11 +11,9 @@ import device from "@/public/icon/device.svg";
 import tv from "@/public/icon/tv.svg";
 import world from "@/public/icon/world.svg";
 import edit from "@/public/icon/edit.svg";
-import Aos from "aos";
-import "aos/dist/aos.css";
+
 import { Nunito } from "next/font/google";
 import Image from "next/image";
-import { forwardRef, useEffect } from "react";
 
 // i need nonito font
 const nunito = Nunito({
@@ -25,36 +22,29 @@ const nunito = Nunito({
   variable: "--font-nunito",
 });
 
-const CategoriesMenu = forwardRef(function CategoriesMenu(props, ref) {
-  useEffect(() => {
-    // use aos animation on scroll
-    Aos.init({ duration: 2000 });
-  }, []);
+export default function CategoriesMenu() {
+  const data = [
+    { name: "Ropa", icon: rupa },
+    { name: "Accesorios", icon: watch },
+    { name: "Calzado", icon: calzado },
+    { name: "Cuidado Personal", icon: shower },
+    { name: "Hogar y decoración", icon: house },
+    { name: "Mascotas", icon: dog },
+    { name: "Niño y Bebé", icon: kid },
+    { name: "Consumibles", icon: coffee },
+    { name: "Tecnología", icon: device },
+    { name: "Ocio", icon: tv },
+    { name: "Deporte", icon: world },
+    { name: "General", icon: edit },
+  ];
 
   return (
-    <div
-      data-aos="fade-right"
-      ref={ref}
-      className="z-50 absolute top-[100%] left-0 w-[240px] md:w-[380px] border border-gray-300 bg-white rounded-r-[20px] p-5"
-    >
+    <div className="z-50 absolute top-[100%] left-0 w-[240px] md:w-[380px] border border-gray-300 bg-white rounded-[20px] p-5">
       <h4 className={`text-[10px] md:text-[16px] lg:text-[24px] mb-2`}>
         Categorias
       </h4>
       <ul className="flex flex-col gap-1 md:gap-3 lg:gap-3">
-        {[
-          { name: "Ropa", icon: rupa },
-          { name: "Accesorios", icon: watch },
-          { name: "Calzado", icon: calzado },
-          { name: "Cuidado Personal", icon: shower },
-          { name: "Hogar y decoración", icon: house },
-          { name: "Mascotas", icon: dog },
-          { name: "Niño y Bebé", icon: kid },
-          { name: "Consumibles", icon: coffee },
-          { name: "Tecnología", icon: device },
-          { name: "Ocio", icon: tv },
-          { name: "Deporte", icon: world },
-          { name: "General", icon: edit },
-        ].map((category, index) => (
+        {data.map((category, index) => (
           <li
             key={index}
             className="flex items-center gap-3 text-[20px] font-bold text-[#665E5E] justify-between"
@@ -75,6 +65,4 @@ const CategoriesMenu = forwardRef(function CategoriesMenu(props, ref) {
       </ul>
     </div>
   );
-});
-
-export default CategoriesMenu;
+}

@@ -16,8 +16,6 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { Nunito } from "next/font/google";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 const nunito = Nunito({
   weight: "400",
@@ -39,9 +37,6 @@ export default function Similares() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    // use aos animation on scroll
-    Aos.init({ duration: 2000 });
-
     if (!api) return;
 
     setCurrent(api.selectedScrollSnap());
@@ -53,10 +48,7 @@ export default function Similares() {
   }, [api]);
 
   return (
-    <div
-      data-aos="fade-up-left"
-      className="custom-container py-5  lg:mb-[61px]"
-    >
+    <div className="custom-container py-5  lg:mb-[61px]">
       <div className="flex items-center justify-between pb-2 md:pb-4 lg:pb-6 lg:mb-[32px]">
         <h2
           className={` font-bridone text-[14px] md:text-[18px] lg:text-[40px] text-[#222222]`}
