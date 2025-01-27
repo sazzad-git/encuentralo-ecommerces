@@ -138,18 +138,18 @@ export default function CategoriesMenu() {
             onMouseLeave={handleMouseLeave}
           >
             <div className="flex items-center gap-3 text-[20px] font-bold text-[#665E5E] justify-between cursor-pointer">
-              <div className="flex items-center gap-2 md:gap-2 md:my-[2px] ">
+              <div className="flex items-center gap-3 md:gap-3 md:my-[2px] ">
                 <Image
                   width={25}
                   height={25}
                   src={category.icon}
                   alt={category.name}
                 />
-                <span className="text-[10px] md:text-[16px] ">
+                <span className="text-[12px] md:text-[16px] ">
                   {category.name}
                 </span>
               </div>
-              <Image width={24} height={24} src={add} alt="Add Icon" />
+              <Image width={14} height={14} src={add} alt="Add Icon" />
             </div>
 
             {hoveredCategory === index && (

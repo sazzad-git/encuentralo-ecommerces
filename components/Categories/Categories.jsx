@@ -53,7 +53,7 @@ export default function Categories() {
 
   return (
     <>
-      <div className="categories py-2 lg:py-5 lg:mb-[74px] ">
+      <div className="categories py-2 md:py-5  ">
         <div className="custom-container">
           <div className="categories-head flex items-center gap-3 md:gap-5 lg:gap-8 justify-start md:justify-center overflow-x-scroll">
             {categories.map((sCategory) => (

@@ -11,6 +11,7 @@ import map from "@/public/icon/map.svg";
 import sort from "@/public/icon/sort.png";
 import Image from "next/image";
 import { forwardRef, useState } from "react";
+import { Button } from "../ui/button";
 
 const FilterMenu = forwardRef(function FilterMenu(props, ref) {
   const [value, setValue] = useState(3.5); // Initial value for the slider
@@ -21,11 +22,11 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
   return (
     <div
       ref={ref}
-      className="w-[323px] h-[350px] bg-white absolute top-[110%] right-0 z-50 p-4 rounded-[14px] border border-gray-200"
+      className="w-[323px] h-[385px] md:h-[420px] bg-white absolute top-[110%] right-0 z-50 p-4 rounded-[14px] border border-gray-200"
     >
       <h5 className="text-[16px] border-b border-gray-300 pb-1">Filtros</h5>
       <ul className="py-2 flex flex-col gap-1">
-        <li className="flex items-center text-[12px] font-bold gap-1">
+        <li className="flex items-center text-[12px] md:text-[15px] font-bold gap-1">
           <div className="flex items-center gap-1">
             <input type="checkbox" name="" id="" />
             <div className="w-[15px]">
@@ -37,7 +38,7 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
           </span>
         </li>
 
-        <li className="flex items-center text-[12px] font-bold gap-1">
+        <li className="flex items-center text-[12px] md:text-[15px] font-bold gap-1">
           <div className="flex items-center gap-1">
             <input type="checkbox" name="" id="" />
             <div className="w-[15px]">
@@ -49,7 +50,7 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
           </span>
         </li>
 
-        <li className="flex items-center text-[12px] font-bold gap-1">
+        <li className="flex items-center text-[12px] md:text-[15px] font-bold gap-1">
           <div className="flex items-center gap-1">
             <input type="checkbox" name="" id="" />
             <div className="w-[15px]">
@@ -61,7 +62,7 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
           </span>
         </li>
 
-        <li className="flex items-center text-[12px] font-bold gap-1">
+        <li className="flex items-center text-[12px] md:text-[15px] font-bold gap-1">
           <div className="flex items-center gap-1">
             <input type="checkbox" name="" id="" />
             <div className="w-[15px]">
@@ -76,7 +77,7 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
 
       <h5 className="text-[14px] border-b border-gray-300">Metodos de Pago</h5>
       <ul className="py-2 flex flex-col gap-1">
-        <li className="flex items-center text-[12px] font-bold gap-1">
+        <li className="flex items-center text-[12px] md:text-[15px] font-bold gap-1">
           <div className="flex items-center gap-1">
             <input type="checkbox" name="" id="" />
             <div className="w-[15px]">
@@ -88,7 +89,7 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
           </span>
         </li>
 
-        <li className="flex items-center text-[12px] font-bold gap-1">
+        <li className="flex items-center text-[12px] md:text-[15px] font-bold gap-1">
           <div className="flex items-center gap-1">
             <input type="checkbox" name="" id="" />
             <div className="w-[15px]">
@@ -100,7 +101,7 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
           </span>
         </li>
 
-        <li className="flex items-center text-[12px] font-bold gap-1">
+        <li className="flex items-center text-[12px] md:text-[15px] font-bold gap-1">
           <div className="flex items-center gap-1">
             <input type="checkbox" name="" id="" />
             <div className="w-[15px]">
@@ -115,7 +116,7 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
 
       <h5 className="text-[14px] border-b border-gray-300">Ubicacion</h5>
       <ul className="py-2 mb-[30px] pt-[14px] flex flex-col gap-1">
-        <li className="flex items-center mb-[6px] text-[12px] font-bold gap-1">
+        <li className="flex items-center mb-[6px] text-[12px] md:text-[15px] font-bold gap-1">
           <div className="flex items-center gap-1">
             <input type="checkbox" name="" id="" />
             <div className="w-[15px]">
@@ -170,7 +171,7 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
           </div>
         </li>
 
-        <li className="flex items-center text-[12px] font-bold gap-1">
+        <li className="flex items-center text-[12px] md:text-[15px] font-bold gap-1">
           <div className="flex items-center gap-1">
             <input type="checkbox" name="" id="" />
             <div className="w-[15px]">
@@ -193,6 +194,9 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
             </div>
           </div>
         </li>
+        <Button className=" flex mx-auto h-[42px] w-[120px] overflow-hidden bg-[#E8B30A] hover:bg-[#83c59a] rounded-full text-base border-[1.5px] border-black text-black">
+          Update
+        </Button>
       </ul>
     </div>
   );
