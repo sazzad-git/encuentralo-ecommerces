@@ -50,7 +50,7 @@ export default function SmallInteresar() {
                     <Image src={shopLogo} alt="Shop Logo" />
                   </div>
                   <div className="leading-0 lg:leading-[125%]">
-                    <h4 className="text-[10px] font-bridone lg:text-[20px]">
+                    <h4 className="text-[10px] font-bridone md:text-[18px]">
                       Aress.Cl
                     </h4>
                     <p className="text-[9px] lg:text-[16px] font-bold text-[#A06205]">

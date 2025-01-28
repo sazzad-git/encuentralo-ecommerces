@@ -101,8 +101,8 @@ export default function Interesar() {
                       <Image src={shopLogo} alt="Shop Logo" />
                     </div>
                     <div className="leading-0 lg:leading-[125%]">
-                      <h4 className="text-[10px] text-[#222222] font-[350] font-bridone md:text-[13px] lg:text-[20px]">
-                        Aress.Cl{" "}
+                      <h4 className="text-[10px] text-[#222222] font-[350] font-bridone md:text-[18px] lg:text-[18px]">
+                        Aress.Cl
                         {sData.victor && (
                           <Image
                             className="inline"

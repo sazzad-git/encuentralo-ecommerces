@@ -38,7 +38,7 @@ export default function Trendencla() {
                       <Image src={begLogo} alt="Shop Logo" />
                     </div>
                     <div className="leading-0 lg:leading-[125%]">
-                      <h4 className="text-[10px] font-bridone md:text-[13px] lg:text-[20px] font-[350] text-[#222222]">
+                      <h4 className="text-[10px] font-bridone md:text-[18px] font-[350] text-[#222222]">
                         Aress.Cl
                       </h4>
                       <p

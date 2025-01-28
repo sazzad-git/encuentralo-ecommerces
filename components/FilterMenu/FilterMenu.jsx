@@ -26,7 +26,7 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
     >
       <h5 className="text-[16px] border-b border-gray-300 pb-1">Filtros</h5>
       <ul className="py-2 flex flex-col gap-1">
-        <li className="flex items-center text-[12px] md:text-[15px] font-bold gap-1">
+        <li className="flex items-center text-[12px] md:text-[15px]  gap-1">
           <div className="flex items-center gap-1">
             <input type="checkbox" name="" id="" />
             <div className="w-[15px]">
@@ -38,7 +38,7 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
           </span>
         </li>
 
-        <li className="flex items-center text-[12px] md:text-[15px] font-bold gap-1">
+        <li className="flex items-center text-[12px] md:text-[15px]  gap-1">
           <div className="flex items-center gap-1">
             <input type="checkbox" name="" id="" />
             <div className="w-[15px]">
@@ -50,7 +50,7 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
           </span>
         </li>
 
-        <li className="flex items-center text-[12px] md:text-[15px] font-bold gap-1">
+        <li className="flex items-center text-[12px] md:text-[15px]  gap-1">
           <div className="flex items-center gap-1">
             <input type="checkbox" name="" id="" />
             <div className="w-[15px]">
@@ -62,7 +62,7 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
           </span>
         </li>
 
-        <li className="flex items-center text-[12px] md:text-[15px] font-bold gap-1">
+        <li className="flex items-center text-[12px] md:text-[15px]  gap-1">
           <div className="flex items-center gap-1">
             <input type="checkbox" name="" id="" />
             <div className="w-[15px]">
@@ -77,7 +77,7 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
 
       <h5 className="text-[14px] border-b border-gray-300">Metodos de Pago</h5>
       <ul className="py-2 flex flex-col gap-1">
-        <li className="flex items-center text-[12px] md:text-[15px] font-bold gap-1">
+        <li className="flex items-center text-[12px] md:text-[15px]  gap-1">
           <div className="flex items-center gap-1">
             <input type="checkbox" name="" id="" />
             <div className="w-[15px]">
@@ -89,7 +89,7 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
           </span>
         </li>
 
-        <li className="flex items-center text-[12px] md:text-[15px] font-bold gap-1">
+        <li className="flex items-center text-[12px] md:text-[15px]  gap-1">
           <div className="flex items-center gap-1">
             <input type="checkbox" name="" id="" />
             <div className="w-[15px]">
@@ -101,7 +101,7 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
           </span>
         </li>
 
-        <li className="flex items-center text-[12px] md:text-[15px] font-bold gap-1">
+        <li className="flex items-center text-[12px] md:text-[15px]  gap-1">
           <div className="flex items-center gap-1">
             <input type="checkbox" name="" id="" />
             <div className="w-[15px]">
@@ -116,7 +116,7 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
 
       <h5 className="text-[14px] border-b border-gray-300">Ubicacion</h5>
       <ul className="py-2 mb-[30px] pt-[14px] flex flex-col gap-1">
-        <li className="flex items-center mb-[6px] text-[12px] md:text-[15px] font-bold gap-1">
+        <li className="flex items-center mb-[6px] text-[12px] md:text-[15px] gap-1">
           <div className="flex items-center gap-1">
             <input type="checkbox" name="" id="" />
             <div className="w-[15px]">
@@ -171,7 +171,7 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
           </div>
         </li>
 
-        <li className="flex items-center text-[12px] md:text-[15px] font-bold gap-1">
+        <li className="flex items-center text-[12px] md:text-[15px]  gap-1">
           <div className="flex items-center gap-1">
             <input type="checkbox" name="" id="" />
             <div className="w-[15px]">

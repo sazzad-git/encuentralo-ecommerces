@@ -137,7 +137,7 @@ export default function CategoriesMenu() {
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
-            <div className="flex items-center gap-3 text-[20px] font-bold text-[#665E5E] justify-between cursor-pointer">
+            <div className="flex items-center gap-3 text-[20px] text-[#665E5E] justify-between cursor-pointer">
               <div className="flex items-center gap-3 md:gap-3 md:my-[2px] ">
                 <Image
                   width={25}
@@ -149,7 +149,9 @@ export default function CategoriesMenu() {
                   {category.name}
                 </span>
               </div>
-              <Image width={14} height={14} src={add} alt="Add Icon" />
+              <div className="bg-[#d9c09b] bg- flex items-center rounded-[5px] justify-center w-[24px] h-[24px] font-[#FFFFFF]">
+                <Image width={14} height={14} src={add} alt="Add Icon" />
+              </div>
             </div>
 
             {hoveredCategory === index && (
@@ -158,11 +160,11 @@ export default function CategoriesMenu() {
                 onMouseEnter={handleSubMenuMouseEnter}
                 onMouseLeave={handleSubMenuMouseLeave}
               >
-                <ul className="py-2">
+                <ul className="py-1">
                   {category.subcategory.map((subcat, subIndex) => (
                     <li
                       key={subIndex}
-                      className="px-4 py-2 hover:bg-gray-100 text-[10px] md:text-[14px] lg:text-[16px] cursor-pointer"
+                      className="px-4 py-1 hover:bg-gray-100 text-[10px] md:text-[14px] lg:text-[16px] cursor-pointer"
                     >
                       {subcat}
                     </li>

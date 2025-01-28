@@ -122,13 +122,13 @@ export default function Destacados() {
                     {card.thumbnails.map((thumbnail, index) => (
                       <div
                         key={index}
-                        className={`absolute-box w-[27px] h-[31px] md:w-[45px] md:h-[45px] overflow-hidden border-2 border-white rounded lg:rounded-lg cursor-pointer relative ${
+                        className={`absolute-box w-[27px] h-[31px] lg:w-[60px] lg:h-[60px] overflow-hidden border-2 border-white rounded lg:rounded-lg cursor-pointer relative ${
                           thumbnail === d ? "another-box" : ""
                         }`}
                         onClick={() => handleImageClick(card.id, thumbnail)} // Set selected image for this card
                       >
                         <Image
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover transition duration-300 hover:blur-sm"
                           src={thumbnail}
                           alt={`Clothing ${index + 1}`}
                         />
@@ -144,8 +144,8 @@ export default function Destacados() {
                       <Image src={shopLogo} alt="Shop Logo" />
                     </div>
                     <div className="leading-0 lg:leading-[125%]">
-                      <h4 className="text-[10px] text-[#222222] font-[350] font-bridone md:text-[13px] lg:text-[20px]">
-                        Aress.Cl{" "}
+                      <h4 className="text-[10px] text-[#222222] font-[350] font-bridone md:text-[18px] lg:text-[18px]">
+                        Aress.Cl
                         {card.victor && (
                           <Image
                             className="inline"
@@ -155,7 +155,7 @@ export default function Destacados() {
                         )}
                       </h4>
                       <p
-                        className={`${nunito.variable} lg:mt-1 text-[9px] md:text-[11px] lg:text-[18px] font-bold text-[#A06205]`}
+                        className={`${nunito.variable} lg:mt-1 text-[9px] md:text-[11px] lg:text-[16px] font-bold text-[#A06205]`}
                       >
                         Accesorios
                         <span className={`${nunito.variable} font-normal`}>

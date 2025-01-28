@@ -108,7 +108,7 @@ export default function SimpleSlider() {
                       <Image src={shopLogo} alt="Shop Logo" />
                     </div>
                     <div className="leading-0 lg:leading-[125%]">
-                      <h4 className="text-[10px] font-bridone md:text-[13px] lg:text-[20px] text-[#222222] font-[350]">
+                      <h4 className="text-[10px] font-bridone md:text-[18px] text-[#222222] font-[350]">
                         Aress.Cl
                       </h4>
                       <p
