@@ -152,7 +152,7 @@ export default function SimpleSlider() {
                       onClick={() => handleThumbnailClick(sData.id, thumb)} // Update selected image on thumbnail click
                     >
                       <Image
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition duration-300 hover:blur-sm"
                         src={thumb}
                         alt={`Thumbnail ${index + 1}`}
                       />

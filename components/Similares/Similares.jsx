@@ -101,7 +101,7 @@ export default function Similares() {
                       <Image src={shopLogo} alt="Shop Logo" />
                     </div>
                     <div className="leading-0 lg:leading-[125%]">
-                      <h4 className="text-[10px] text-[#222222] font-[350] font-bridone md:text-[13px] lg:text-[17px]">
+                      <h4 className="text-[10px] text-[#222222] font-[350] font-bridone md:text-[13px] lg:text-[16px]">
                         Aress.Cl
                         {sData.victor && (
                           <Image
@@ -112,7 +112,7 @@ export default function Similares() {
                         )}
                       </h4>
                       <p
-                        className={`text-[9px] md:text-[12px] font-bold text-[#A06205] ${nunito.variable}`}
+                        className={`text-[9px] md:text-[14px] font-bold text-[#A06205] ${nunito.variable}`}
                       >
                         Accesorios
                         <span className={`font-normal ${nunito.variable}`}>

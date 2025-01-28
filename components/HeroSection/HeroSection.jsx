@@ -84,9 +84,9 @@ export default function HeroSection() {
   };
 
   return (
-    <div className="h-[27vh]  md:h-[50vh] bg-cover bg-center bg-no-repeat bg-[#DFDFDF] md:bg-[url('/hero/Hero.png')] mb-5 md:mb-36">
+    <div className="h-[29vh]  md:h-[50vh] bg-cover bg-center bg-no-repeat bg-[#DFDFDF] md:bg-[url('/hero/Hero.png')] mb-5 md:mb-36">
       <div className="h-[94%] md:h-full flex flex-col items-center justify-center md:bg-black md:bg-opacity-40">
-        <h1 className="text-black md:text-white text-xl md:text-5xl md:mb-3 lg:mb-5 md:text-[44px] lg:text-[64px] font-bold text-center  md:mt-1 ">
+        <h1 className="text-black md:text-white text-xl md:text-5xl md:mb-3 lg:mb-5 md:text-[44px] lg:text-[64px] font-bold text-center mt-2  md:mt-1 ">
           EMPRENDIMIENTOS DESTACADOS
         </h1>
         <div
