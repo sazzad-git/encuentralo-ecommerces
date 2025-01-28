@@ -126,18 +126,18 @@ export default function CategoriesMenu() {
 
   return (
     <div
-      className={`${nunito.variable} z-50 absolute top-[100%] left-0 w-[240px] md:w-[380px] border border-gray-300 bg-white rounded-[20px] p-5`}
+      className={`${nunito.variable} z-50 absolute top-[100%] left-0 w-[240px] md:w-[380px] border border-gray-300 bg-white rounded-[20px] py-5`}
     >
-      <h4 className="text-[10px] md:text-[20px]  mb-2">Categorias</h4>
+      <h4 className="text-[10px] md:text-[20px]  mb-2 px-5">Categorias</h4>
       <ul className="flex flex-col gap-1 md:gap-3 lg:gap-3">
         {data.map((category, index) => (
           <li
             key={index}
-            className="relative"
+            className="relative hover:bg-gray-100 px-5"
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
-            <div className="flex items-center gap-3 text-[20px] text-[#665E5E] justify-between cursor-pointer">
+            <div className="flex  items-center gap-3 text-[20px] text-[#665E5E] justify-between cursor-pointer">
               <div className="flex items-center gap-3 md:gap-3 md:my-[2px] ">
                 <Image
                   width={25}
@@ -156,7 +156,7 @@ export default function CategoriesMenu() {
 
             {hoveredCategory === index && (
               <div
-                className="absolute left-full top-0 ml-2 bg-white border border-gray-300 rounded-lg shadow-lg z-50"
+                className="absolute right-[-100px] top-0 ml-2 bg-white border border-gray-300 rounded-lg shadow-lg z-50"
                 onMouseEnter={handleSubMenuMouseEnter}
                 onMouseLeave={handleSubMenuMouseLeave}
               >
