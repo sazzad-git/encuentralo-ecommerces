@@ -109,8 +109,8 @@ export default function Mejores() {
               <div
                 className={` border  rounded-[8px] bg-white overflow-hidden ${
                   index === activeFirstIndex + 1
-                    ? "md:h-[451px] md:w-[390px]  md:transform md:translate-y-[-20px]" // Larger size for active card
-                    : "md:h-[407px]  md:w-[389px]" // Default size for other cards
+                    ? "md:h-[411px] md:w-[390px]  md:transform md:translate-y-[-20px]" // Larger size for active card
+                    : "md:h-[377px]  md:w-[389px]" // Default size for other cards
                 } h-[233px] w-[180px] md:mt-5`}
               >
                 {/* className="w-full h-[166px] md:h-[230px] lg:h-[281px]" */}
@@ -127,9 +127,6 @@ export default function Mejores() {
                     alt="Slider Cover"
                   />
                 </div>
-                <span className="flex md:pt-3 justify-center items-center">
-                  <Image src={dotted} width={80} height={7} alt="Dotted" />
-                </span>
                 <div className="flex justify-between p-2 lg:p-4">
                   <div className="flex items-center gap-1 md:gap-2 lg:gap-3">
                     <div className="w-[25px] h-[25px] md:w-[35px] md:h-[35px] lg:w-[52px] lg:h-[52px] rounded-full">

@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <div className="h-[165px] custom-container md:h-[250px] lg:h-[329px] bg-[#323236]">
+    <div className="h-[165px] md:h-[250px] lg:h-[280px] bg-[#323236]">
       <div className="footer-container h-full flex flex-col justify-end">
-        <h2 className="text-[16px] md:text-[25px] lg:text-[45px] text-white text-center font-semibold py-2 md:py-3 lg:py-5">
+        <h2 className="text-[16px] md:text-[25px] lg:text-[45px] text-white text-center font-semibold py-2 md:py-3 lg:py-3">
           ENCUENTRALO.CL
         </h2>
 
@@ -32,7 +32,7 @@ export default function Footer() {
           </li>
         </ul>
 
-        <ul className="list-none flex items-center justify-center gap-5 lg:gap-10 py-4 md:py-6 lg:py-8">
+        <ul className="list-none flex items-center justify-center gap-5 lg:gap-10 py-4 md:py-6 lg:py-6">
           <li>
             <a
               href=""
@@ -67,7 +67,7 @@ export default function Footer() {
           </li>
         </ul>
 
-        <p className="text-center text-white py-2 md:py-3 lg:py-5 border-t border-white text-[10px] md:text-[14px] lg:text-[18px]">
+        <p className="text-center text-white py-2 md:py-3 lg:py-4 border-t border-white text-[10px] md:text-[14px] lg:text-[18px]">
           Copyright 2024. All Rights Reserved
         </p>
       </div>

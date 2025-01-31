@@ -22,7 +22,7 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
   return (
     <div
       ref={ref}
-      className="w-[323px] h-[385px] md:h-[420px] bg-white absolute top-[110%] right-0 z-50 p-4 rounded-[14px] border border-gray-200"
+      className="w-[323px] h-[389px] md:h-[424px] bg-white absolute top-[110%] right-0 z-50 p-4 rounded-[14px] border border-gray-200"
     >
       <h5 className="text-[16px] border-b border-gray-300 pb-1">Filtros</h5>
       <ul className="py-2 flex flex-col gap-1">
@@ -184,7 +184,7 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
             </span>
             <div className="relative w-full">
               <input
-                className="border border-[#9E9E9E] rounded-[10px] w-full h-[20px] placeholder:pl-2 placeholder:text-[10px]"
+                className="border border-[#9E9E9E] rounded-[7px] w-full h-[20px] placeholder:pl-2 placeholder:text-[10px]"
                 placeholder="Región Metropolitana"
                 type="text"
               />
@@ -194,8 +194,9 @@ const FilterMenu = forwardRef(function FilterMenu(props, ref) {
             </div>
           </div>
         </li>
-        <Button className=" flex mx-auto h-[42px] w-[120px] overflow-hidden bg-[#E8B30A] hover:bg-[#83c59a] rounded-full text-base border-[1.5px] border-black text-black">
-          Update
+
+        <Button className="flex mx-auto mt-1 h-[42px] w-[120px] overflow-hidden bg-[#E8B30A] hover:bg-[#E8B30A] rounded-full text-base border-[1.5px] border-black text-black">
+          Actualizar
         </Button>
       </ul>
     </div>

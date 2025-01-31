@@ -152,13 +152,13 @@ export default function HeroSection() {
 
 function ProductCard({ image, title, title2, shopLogo }) {
   return (
-    <div className="flex-shrink-0 bg-[#FAFAFA] sm:w-[185px] sm:h-[170px] md:mt-[5px] lg:mt-0 md:h-[256px] lg:h-[320px] md:w-full lg:w-full rounded-lg shadow-md m-1 md:m-0 px-2 overflow-visible border border-gray-300">
+    <div className="flex-shrink-0 bg-[#FAFAFA] sm:w-[185px] sm:h-[170px] md:mt-[5px] lg:mt-0 md:h-[256px] lg:h-[320px] md:w-full lg:w-full rounded-lg shadow-md m-1 pt-2 md:m-0 px-2 overflow-hidden border border-gray-300">
       <Image
         src={image}
         alt={title}
         width={360}
         height={200}
-        className="w-full h-36 md:h-[194px] lg:h-56 object-cover pt-2 md:mt-0 rounded-t-lg"
+        className="w-full h-36 md:h-[194px] lg:h-56 object-cover  md:mt-0 rounded-lg"
       />
       <div className="flex justify-between p-0 md:p-2 lg:p-4 relative min-h-[45px] md:min-h-[70px] lg:min-h-[100px]">
         <div className="flex items-center gap-1 md:gap-2 lg:gap-3">
@@ -166,7 +166,7 @@ function ProductCard({ image, title, title2, shopLogo }) {
             <Image className="aspect-square" src={shopLogo} alt="Shop Logo" />
           </div>
           <div className="leading-0 lg:leading-[125%]">
-            <h4 className="text-[9px] text-[#222222] font-[350] font-bridone md:text-[16px] ">
+            <h4 className="text-[10px] text-[#222222] font-[350] font-bridone md:text-[18px] ">
               {title}
             </h4>
             <p
@@ -178,11 +178,17 @@ function ProductCard({ image, title, title2, shopLogo }) {
         </div>
 
         <div className="absolute top-2 pt-[5px] right-2 flex items-center justify-end gap-1 lg:top-[38%] lg:-translate-y-1/2">
-          <div className="w-[12px] h-[13px] md:w-[19px] md:h-[18px]  border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer">
+          <div className="w-[12px] h-[13px] md:w-[19px] md:h-[18px]  border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer group relative">
             <Image src={Mask} className="w-full h-full" alt="Mask" />
+            <span className="absolute -top-8 left-[-12px] md:left-[-4px] -translate-x-1/2 whitespace-nowrap bg-gray-900 text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
+              Home Info
+            </span>
           </div>
-          <div className="w-[12px] h-[13px] md:w-[19px] md:h-[18px]  border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer">
+          <div className="w-[12px] h-[13px] md:w-[19px] md:h-[18px]  border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer group relative">
             <Image src={car} className="w-full h-full" alt="Car" />
+            <span className="absolute -top-8 left-[-22px] md:left-[-8px] -translate-x-1/2 whitespace-nowrap bg-gray-900 text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
+              Delivery Info
+            </span>
           </div>
         </div>
       </div>

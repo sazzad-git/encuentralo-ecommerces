@@ -16,6 +16,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import Icons from "../common/Icons";
 
 const nunito = Nunito({
   weight: "400",
@@ -77,16 +78,16 @@ export default function Destacados() {
         >
           DESTACADOS
         </h2>
-        <div className="scroll-buttons items-center justify-end gap-5 hidden lg:flex">
+        <div className="scroll-buttons items-center justify-end gap-5 flex">
           <button
             onClick={() => api?.scrollTo(current - 1)}
-            className="grid place-items-center w-[46px] h-[46px] border border-[#A06205] rounded-full cursor-pointer active:bg-[#f4ede2]"
+            className="grid place-items-center w-[26px] h-[26px] md:w-[46px] md:h-[46px] border border-[#A06205] rounded-full cursor-pointer active:bg-[#f4ede2]"
           >
             <i className="fa-solid fa-arrow-left-long text-[#A06205]"></i>
           </button>
           <button
             onClick={() => api?.scrollTo(current + 1)}
-            className="grid place-items-center w-[46px] h-[46px] border border-[#A06205] rounded-full cursor-pointer active:bg-[#f4ede2]"
+            className="grid place-items-center w-[26px] h-[26px] md:w-[46px] md:h-[46px] border border-[#A06205] rounded-full cursor-pointer active:bg-[#f4ede2]"
           >
             <i className="fa-solid fa-arrow-right-long text-[#A06205]"></i>
           </button>
@@ -165,15 +166,7 @@ export default function Destacados() {
                     </div>
                   </div>
                   <div className="absolute top-2 right-2 flex items-center justify-end gap-1 lg:top-1/2 lg:-translate-y-1/2">
-                    <div className="w-[12px] h-[13px] md:w-[16px] md:h-[16px] lg:w-[22px] lg:h-[24px] border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer">
-                      <MdOutlineHome className="size-3 md:size-4 lg:size-5 text-[#BF8937]" />
-                    </div>
-                    <div className="w-[12px] h-[13px] md:w-[16px] md:h-[16px] lg:w-[22px] lg:h-[24px] border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer">
-                      <LuTruck className="size-3 md:size-4 lg:size-5 text-[#BF8937]" />
-                    </div>
-                    <div className="w-[12px] h-[13px] md:w-[16px] md:h-[16px] lg:w-[22px] lg:h-[24px] border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer">
-                      <MdOutlineRecycling className="size-3 md:size-4 lg:size-5 text-[#BF8937]" />
-                    </div>
+                    <Icons />
                   </div>
                 </div>
 

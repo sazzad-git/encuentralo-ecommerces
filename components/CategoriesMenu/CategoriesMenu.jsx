@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { Nunito } from "next/font/google";
 
-import add from "@/public/arrow.svg";
+import add from "@/public/rightArrow.png";
 import rupa from "@/public/icon/rupa.svg";
 import watch from "@/public/icon/watch.svg";
 import calzado from "@/public/icon/calzado.svg";
@@ -25,9 +25,9 @@ const nunito = Nunito({
 });
 
 export default function CategoriesMenu() {
-  const [hoveredCategory, setHoveredCategory] = useState(0);
+  const [hoveredCategory, setHoveredCategory] = useState(null);
   const [isSubMenuHovered, setIsSubMenuHovered] = useState(false);
-  const timeoutRef = useRef(200);
+  const timeoutRef = useRef(null);
 
   const data = [
     {
@@ -104,7 +104,7 @@ export default function CategoriesMenu() {
       if (!isSubMenuHovered) {
         setHoveredCategory(null);
       }
-    }, 100);
+    }, 150);
   };
 
   const handleSubMenuMouseEnter = () => {
@@ -113,7 +113,7 @@ export default function CategoriesMenu() {
 
   const handleSubMenuMouseLeave = () => {
     setIsSubMenuHovered(false);
-    handleMouseLeave();
+    setHoveredCategory(null);
   };
 
   useEffect(() => {
@@ -128,7 +128,7 @@ export default function CategoriesMenu() {
     <div
       className={`${nunito.variable} z-50 absolute top-[100%] left-0 w-[240px] md:w-[380px] border border-gray-300 bg-white rounded-[20px] py-5`}
     >
-      <h4 className="text-[10px] md:text-[20px]  mb-2 px-5">Categorias</h4>
+      <h4 className="text-[10px] md:text-[20px] mb-2 px-5">Categorias</h4>
       <ul className="flex flex-col gap-1 md:gap-3 lg:gap-3">
         {data.map((category, index) => (
           <li
@@ -137,20 +137,20 @@ export default function CategoriesMenu() {
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
-            <div className="flex  items-center gap-3 text-[20px] text-[#665E5E] justify-between cursor-pointer">
-              <div className="flex items-center gap-3 md:gap-3 md:my-[2px] ">
+            <div className="flex items-center gap-3 text-[20px] text-[#665E5E] justify-between cursor-pointer">
+              <div className="flex items-center gap-3 md:gap-3 md:my-[2px]">
                 <Image
                   width={25}
                   height={25}
                   src={category.icon}
                   alt={category.name}
                 />
-                <span className="text-[12px] md:text-[16px] ">
+                <span className="text-[12px] md:text-[16px]">
                   {category.name}
                 </span>
               </div>
-              <div className="bg-[#d9c09b] bg- flex items-center rounded-[5px] justify-center w-[24px] h-[24px] font-[#FFFFFF]">
-                <Image width={14} height={14} src={add} alt="Add Icon" />
+              <div className="bg-[#d9c09b] flex items-center rounded-[5px] justify-center w-[24px] h-[24px]">
+                <Image width={18} height={18} src={add} alt="Add Icon" />
               </div>
             </div>
 

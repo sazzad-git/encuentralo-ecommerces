@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/carousel";
 
 import { Nunito } from "next/font/google";
+import Icons from "../common/Icons";
 
 // nomito font
 const nunito = Nunito({
@@ -122,15 +123,7 @@ export default function SimpleSlider() {
                     </div>
                   </div>
                   <div className="absolute top-2 right-2 flex items-center justify-end gap-1 lg:top-1/2 lg:-translate-y-1/2">
-                    <div className="w-[12px] h-[13px] md:w-[16px] md:h-[16px] lg:w-[22px] lg:h-[24px] border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer">
-                      <MdOutlineHome className="size-3 md:size-4 lg:size-5 text-[#BF8937]" />
-                    </div>
-                    <div className="w-[12px] h-[13px] md:w-[16px] md:h-[16px] lg:w-[22px] lg:h-[24px] border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer">
-                      <LuTruck className="size-3 md:size-4 lg:size-5 text-[#BF8937]" />
-                    </div>
-                    <div className="w-[12px] h-[13px] md:w-[16px] md:h-[16px] lg:w-[22px] lg:h-[24px] border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer">
-                      <MdOutlineRecycling className="size-3 md:size-4 lg:size-5 text-[#BF8937]" />
-                    </div>
+                    <Icons />
                   </div>
                 </div>
 

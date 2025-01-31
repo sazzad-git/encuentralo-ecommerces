@@ -23,7 +23,7 @@ const nunito = Nunito({
   variable: "--font-nunito",
 });
 
-export default function Interesar({ title }) {
+export default function SmilerNote() {
   const data = [
     { id: 1, img: img },
     { id: 2, img: imgOne, victor: victor2 },
@@ -48,12 +48,10 @@ export default function Interesar({ title }) {
   }, [api]);
 
   return (
-    <div className="custom-container py-5  lg:mb-[61px]">
+    <div className="custom-container py-5 hidden lg:block lg:mb-[61px]">
       <div className="flex items-center justify-between pb-2 md:pb-4 lg:pb-6 lg:mb-[32px]">
-        <h2
-          className={` font-bridone text-[14px] md:text-[18px] lg:text-[40px] text-[#222222]`}
-        >
-          {title}
+        <h2 className="font-bridone text-[14px] md:text-[18px] lg:text-[40px] text-[#222222]">
+          TE PODRIA INTERESAR
         </h2>
         <div className="scroll-buttons items-center justify-end gap-5 hidden lg:flex">
           <button
@@ -84,10 +82,10 @@ export default function Interesar({ title }) {
           {data.map((sData, index) => (
             <CarouselItem
               key={sData.id}
-              className="another-second basis-1/2 lg:basis-1/4"
+              className="another-style basis-1/2 lg:basis-1/4"
             >
               <div className="item border bg-white">
-                <div className="h-[170px] md:h-[293px] p-2">
+                <div className="h-[293px] p-2">
                   <Image
                     className="w-full h-full object-cover"
                     src={sData.img}
@@ -95,10 +93,9 @@ export default function Interesar({ title }) {
                   />
                 </div>
 
-                {/* Other Content */}
-                <div className="flex justify-between p-2 lg:p-4 relative">
+                <div className="flex justify-between p-2 relative">
                   <div className="flex items-center gap-2 lg:gap-3">
-                    <div className="w-[25px] h-[25px] md:w-[35px] md:h-[35px] lg:w-[52px] lg:h-[52px] rounded-full">
+                    <div className="w-[25px] h-[25px] md:w-[30px] md:h-[30px] lg:w-[40px] lg:h-[40px] rounded-full">
                       <Image src={shopLogo} alt="Shop Logo" />
                     </div>
                     <div className="leading-0 lg:leading-[125%]">
@@ -113,37 +110,38 @@ export default function Interesar({ title }) {
                         )}
                       </h4>
                       <p
-                        className={`${nunito.variable} lg:mt-1 text-[9px] md:text-[11px] lg:text-[16px] font-bold text-[#A06205]`}
+                        className={`text-[9px] md:text-[12px] lg:text-[14px] font-bold text-[#A06205] ${nunito.variable}`}
                       >
                         Accesorios
-                        <span className={`${nunito.variable} font-normal`}>
+                        <span className={`font-normal ${nunito.variable}`}>
                           / Joyería
                         </span>
                       </p>
                     </div>
                   </div>
-                  <div className="absolute top-2 right-2 flex items-center justify-end gap-1 lg:top-1/3 lg:-translate-y-1/2">
-                    <div className="w-[12px] h-[13px] md:w-[16px] md:h-[16px] lg:w-[22px] lg:h-[24px] border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer group relative">
-                      <MdOutlineHome className="size-3 md:size-4 lg:size-5 text-[#BF8937]" />
-                      <span className="absolute -top-8 left-[-10px] md:left-[4px] -translate-x-1/2 whitespace-nowrap bg-gray-900 text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
-                        Home Info
-                      </span>
+                  <div className="absolute top-2 right-2 flex items-center justify-end gap-1">
+                    <div className="w-[22px] h-[24px] border border-[#F1F1F1] grid place-items-center rounded cursor-pointer">
+                      <MdOutlineHome className="size-5 text-[#BF8937]" />
                     </div>
-                    <div className="group relative w-[12px] h-[13px] md:w-[16px] md:h-[16px] lg:w-[22px] lg:h-[24px] border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer">
-                      <LuTruck className="size-3 md:size-4 lg:size-5 text-[#BF8937]" />
+                    <div className="relative group">
+                      {/* Icon Button */}
+                      <div className="w-[12px] h-[13px] md:w-[16px] md:h-[16px] lg:w-[22px] lg:h-[24px] border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer">
+                        <LuTruck className="size-3 md:size-4 lg:size-5 text-[#BF8937]" />
+                      </div>
 
                       {/* Tooltip */}
-                      <span className="absolute -top-8 left-[-22px] md:left-[-4px] -translate-x-1/2 whitespace-nowrap bg-gray-900 text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
-                        Delivery Info
-                      </span>
+                      <div className="absolute left-1/2 -translate-x-1/2 bottom-[110%] bg-black text-white text-[10px] md:text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-lg whitespace-nowrap">
+                        Shipping Info
+                        <div className="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-
                 <p
-                  className={`${nunito.variable} font-sans text-[8px] md:text-[12px] lg:text-[16px] p-2 pt-0 lg:p-3 capitalize`}
+                  className={`${nunito.variable} font-sans text-[13px] p-3 capitalize`}
                 >
-                  aress.cl es una tienda de articulos de ropa chabacana.
+                  impulso naturaltienda es una tienda de suplementos deportivos
+                  naturales.
                 </p>
               </div>
             </CarouselItem>
