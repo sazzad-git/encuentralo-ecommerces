@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react"; // Import useState
+import { useEffect, useState } from "react"; // Import useState
 import heart from "@/public/accessories/heart.svg";
 import currency from "@/public/accessories/dollar.svg";
 import image from "@/public/accessories/image.png";
@@ -17,12 +17,132 @@ import image11 from "@/public/accessories/image11.png";
 import image12 from "@/public/accessories/imagee12.png";
 import { Button } from "../ui/button";
 
+const data = [
+  { id: 1, image: image, name: "anillos", currency: currency, heart: heart },
+  {
+    id: 2,
+    image: image2,
+    name: "collares",
+    currency: currency,
+    heart: heart,
+  },
+  { id: 3, image: image3, name: "anillos", currency: currency, heart: heart },
+  { id: 4, image: image4, name: "anillos", currency: currency, heart: heart },
+  { id: 5, image: image5, name: "anillos", currency: currency, heart: heart },
+  { id: 6, image: image6, name: "anillos", currency: currency, heart: heart },
+  { id: 7, image: image7, name: "anillos", currency: currency, heart: heart },
+  { id: 8, image: image8, name: "anillos", currency: currency, heart: heart },
+  { id: 9, image: image9, name: "anillos", currency: currency, heart: heart },
+  {
+    id: 10,
+    image: image10,
+    name: "anillos",
+    currency: currency,
+    heart: heart,
+  },
+  {
+    id: 11,
+    image: image11,
+    name: "anillos",
+    currency: currency,
+    heart: heart,
+  },
+  {
+    id: 12,
+    image: image12,
+    name: "anillos",
+    currency: currency,
+    heart: heart,
+  },
+  { id: 13, image: image, name: "anillos", currency: currency, heart: heart },
+  {
+    id: 14,
+    image: image2,
+    name: "collares",
+    currency: currency,
+    heart: heart,
+  },
+  {
+    id: 15,
+    image: image3,
+    name: "anillos",
+    currency: currency,
+    heart: heart,
+  },
+  {
+    id: 16,
+    image: image4,
+    name: "anillos",
+    currency: currency,
+    heart: heart,
+  },
+  {
+    id: 17,
+    image: image5,
+    name: "anillos",
+    currency: currency,
+    heart: heart,
+  },
+  {
+    id: 18,
+    image: image6,
+    name: "anillos",
+    currency: currency,
+    heart: heart,
+  },
+  {
+    id: 19,
+    image: image7,
+    name: "anillos",
+    currency: currency,
+    heart: heart,
+  },
+  {
+    id: 20,
+    image: image8,
+    name: "anillos",
+    currency: currency,
+    heart: heart,
+  },
+  {
+    id: 21,
+    image: image9,
+    name: "anillos",
+    currency: currency,
+    heart: heart,
+  },
+  {
+    id: 22,
+    image: image10,
+    name: "anillos",
+    currency: currency,
+    heart: heart,
+  },
+  {
+    id: 23,
+    image: image11,
+    name: "anillos",
+    currency: currency,
+    heart: heart,
+  },
+  {
+    id: 24,
+    image: image12,
+    name: "anillos",
+    currency: currency,
+    heart: heart,
+  },
+];
+
 const Interesa = () => {
   // State to track liked status for each item
   const [likedItems, setLikedItems] = useState({});
 
   // State to track the number of visible items
   const [visibleItems, setVisibleItems] = useState(12);
+
+  // State to track the number of items to load
+  const [itemsToLoad, setItemsToLoad] = useState(4); // Default to 4 items for large screens
 
   // Function to toggle liked status
   const toggleLike = (id) => {
@@ -34,125 +154,28 @@ const Interesa = () => {
 
   // Function to load more items
   const loadMore = () => {
-    setVisibleItems((prev) => prev + 4); // Load 3 more items
+    setVisibleItems((prev) => prev + itemsToLoad); // Load items based on screen size
   };
 
-  const data = [
-    { id: 1, image: image, name: "anillos", currency: currency, heart: heart },
-    {
-      id: 2,
-      image: image2,
-      name: "collares",
-      currency: currency,
-      heart: heart,
-    },
-    { id: 3, image: image3, name: "anillos", currency: currency, heart: heart },
-    { id: 4, image: image4, name: "anillos", currency: currency, heart: heart },
-    { id: 5, image: image5, name: "anillos", currency: currency, heart: heart },
-    { id: 6, image: image6, name: "anillos", currency: currency, heart: heart },
-    { id: 7, image: image7, name: "anillos", currency: currency, heart: heart },
-    { id: 8, image: image8, name: "anillos", currency: currency, heart: heart },
-    { id: 9, image: image9, name: "anillos", currency: currency, heart: heart },
-    {
-      id: 10,
-      image: image10,
-      name: "anillos",
-      currency: currency,
-      heart: heart,
-    },
-    {
-      id: 11,
-      image: image11,
-      name: "anillos",
-      currency: currency,
-      heart: heart,
-    },
-    {
-      id: 12,
-      image: image12,
-      name: "anillos",
-      currency: currency,
-      heart: heart,
-    },
-    { id: 13, image: image, name: "anillos", currency: currency, heart: heart },
-    {
-      id: 14,
-      image: image2,
-      name: "collares",
-      currency: currency,
-      heart: heart,
-    },
-    {
-      id: 15,
-      image: image3,
-      name: "anillos",
-      currency: currency,
-      heart: heart,
-    },
-    {
-      id: 16,
-      image: image4,
-      name: "anillos",
-      currency: currency,
-      heart: heart,
-    },
-    {
-      id: 17,
-      image: image5,
-      name: "anillos",
-      currency: currency,
-      heart: heart,
-    },
-    {
-      id: 18,
-      image: image6,
-      name: "anillos",
-      currency: currency,
-      heart: heart,
-    },
-    {
-      id: 19,
-      image: image7,
-      name: "anillos",
-      currency: currency,
-      heart: heart,
-    },
-    {
-      id: 20,
-      image: image8,
-      name: "anillos",
-      currency: currency,
-      heart: heart,
-    },
-    {
-      id: 21,
-      image: image9,
-      name: "anillos",
-      currency: currency,
-      heart: heart,
-    },
-    {
-      id: 22,
-      image: image10,
-      name: "anillos",
-      currency: currency,
-      heart: heart,
-    },
-    {
-      id: 23,
-      image: image11,
-      name: "anillos",
-      currency: currency,
-      heart: heart,
-    },
-    {
-      id: 24,
-      image: image12,
-      name: "anillos",
-      currency: currency,
-      heart: heart,
-    },
-  ];
+  // Effect to update itemsToLoad based on screen size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setItemsToLoad(3); // Load 3 items on small devices
+      } else {
+        setItemsToLoad(4); // Load 4 items on large devices
+      }
+    };
+
+    // Set initial value
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="md:w-[1160px] mx-auto mb-[70px] mt-3 md:mb-[47px] px-[8px] md:px-0">
@@ -173,7 +196,7 @@ const Interesa = () => {
 
             {/* Heart Icon with Toggle Functionality */}
             <div
-              className={`absolute top-2 right-2 cursor-pointer ${
+              className={`absolute top-2 right-2 w-[10px] h-[10px] md:w-[34px] md:h-[34px] cursor-pointer ${
                 likedItems[item.id] ? "bg-red" : ""
               }`} // Apply bg-red class if liked
               onClick={() => toggleLike(item.id)} // Toggle like on click
@@ -181,9 +204,7 @@ const Interesa = () => {
               <Image
                 src={item.heart}
                 alt="Heart"
-                width={34}
-                height={34}
-                className="p-1" // Optional: Add padding for better appearance
+                className=" w-full h-full" // Optional: Add padding for better appearance
               />
             </div>
 
@@ -206,7 +227,7 @@ const Interesa = () => {
       {visibleItems < data.length && (
         <Button
           onClick={loadMore}
-          className="flex mx-auto mt-1 h-[42px] w-[120px] md:mt-[50px] overflow-hidden bg-[#E8B30A] hover:bg-[#E8B30A] rounded-full text-base border-[1.5px] border-black text-black"
+          className="flex mx-auto mt-3 h-[42px] w-[120px] md:mt-[50px] overflow-hidden bg-[#E8B30A] hover:bg-[#E8B30A] rounded-full text-base border-[1.5px] border-black text-black"
         >
           Ver más
         </Button>

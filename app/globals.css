@@ -102,36 +102,6 @@ hide {
   /* Optional: Add padding for better appearance */
 }
 
-/* Card hover effect */
-/* Wrapper for scaling and hover effects */
-.card-wrapper {
-  transition: all 0.3s ease;
-  transform-origin: center;
-}
-
-.card-wrapper:hover {
-  transform: scale(1.03); /* Scale on hover */
-  box-shadow: 0 4px 8px rgba(11, 2, 2, 0.1); /* Shadow on hover */
-}
-
-/* Card styling */
-.item {
-  /* Initial border */
-  background: white;
-  height: 100%; /* Ensure the card fills the wrapper */
-  width: 100%; /* Ensure the card fills the wrapper */
-}
-
-/* CardFooter hover effects */
-.card-footer .group:hover .tooltip {
-  opacity: 1; /* Show tooltip only when hovering over the icon */
-}
-
-.tooltip {
-  opacity: 0; /* Hide tooltip by default */
-  transition: opacity 0.3s ease;
-}
-
 /* ===== Footer ===== */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -205,6 +175,45 @@ hide {
   .footer-head a,
   .footer-head p {
     font-size: 12px;
+  }
+}
+
+/* Card hover effect for large displays only */
+@media (min-width: 768px) {
+  /* Wrapper for scaling and hover effects */
+  .card-wrapper {
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  .card-wrapper:hover {
+    transform: scale(1.03); /* Scale on hover */
+    box-shadow: 0 4px 8px rgba(11, 2, 2, 0.1); /* Shadow on hover */
+  }
+}
+
+/* Card styling */
+.item {
+  /* Initial border */
+  background: white;
+  height: 100%; /* Ensure the card fills the wrapper */
+  width: 100%; /* Ensure the card fills the wrapper */
+}
+
+/* CardFooter hover effects */
+.card-footer .group:hover .tooltip {
+  opacity: 1; /* Show tooltip only when hovering over the icon */
+}
+
+.tooltip {
+  opacity: 0; /* Hide tooltip by default */
+  transition: opacity 0.3s ease;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+  .card-wrapper:active {
+    opacity: 0.9; /* Slight opacity change on tap */
   }
 }
 

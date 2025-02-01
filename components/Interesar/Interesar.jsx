@@ -68,25 +68,31 @@ export default function Interesar({ title }) {
           gap: "20px",
           loop: true,
         }}
-        className="w-full"
+        className="w-full sm:basis-full"
         setApi={setApi}
       >
         <CarouselContent>
           {data.map((sData, index) => (
             <CarouselItem
               key={sData.id}
-              className="another-second w-[155px] h-[260px] mt-1 lg:w-[302px] lg:h-[475px] lg:mt-3  basis-1/2 lg:basis-1/4"
+              className="another-second sm:min-w-0 sm:shrink-0 sm:grow-0 lg:mt-3 lg:mb-3  basis-1/2 md:basis-1/3 lg:basis-1/4"
             >
               {/* Wrapper for scaling and hover effects */}
-              <div className="card-wrapper w-[142px] h-[246px] lg:w-[274px] mr-[7px] ml-[7px] lg:-mr-[2px] lg:ml-[4px] lg:h-[451px] ">
+              <div className="card-wrapper lg:mr-1 lg:ml-1">
                 <div className="item border">
-                  <div className="h-[170px] md:h-[293px] p-2">
+                  <div className="w-[173px] md:w-full h-[170px] lg:h-[293px] p-2">
                     <Image
                       className="w-full h-full object-cover"
                       src={sData.img}
                       alt="Slider Cover"
                     />
                   </div>
+
+                  {/*  className="another-second min-w-0 shrink-0 lg:mt-3 grow-0 basis-1/2 sm:basis-1/3"
+            >
+              <div className="card-wrapper lg:hover:rounded-lg lg:mr-1 lg:ml-[15px]">
+                <div className="item border rounded-[8px] bg-white overflow-hidden custom-shadow mb-3">
+                  <div className="w-full h-[170px] md:h-[230px] lg:h-[324px] relative"> */}
 
                   <CardFooter
                     showRecyclingIcon={showRecyclingIcon}

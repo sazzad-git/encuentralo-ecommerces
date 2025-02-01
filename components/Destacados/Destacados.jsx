@@ -101,16 +101,16 @@ export default function Destacados() {
           gap: "20px",
           loop: true,
         }}
-        className="w-full"
+        className="w-full basis-full"
         setApi={setApi}
       >
         <CarouselContent>
           {data.map((card) => (
             <CarouselItem
               key={card.id}
-              className="another-second lg:w-[410px] lg:h-[518px] lg:mt-3  basis-1/2 sm:basis-1/3"
+              className="another-second min-w-0 shrink-0 lg:mt-3 grow-0 basis-1/2 sm:basis-1/3"
             >
-              <div className="card-wrapper hover:rounded-lg lg:w-[364px] lg:h-[494px] lg:mr-1 lg:ml-[6px]">
+              <div className="card-wrapper lg:hover:rounded-lg lg:mr-[5px] lg:ml-[6px]">
                 <div className="item border rounded-[8px] bg-white overflow-hidden custom-shadow mb-3">
                   <div className="w-full h-[170px] md:h-[230px] lg:h-[324px] relative">
                     {/* Main Image */}

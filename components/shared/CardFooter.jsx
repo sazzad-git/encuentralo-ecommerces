@@ -29,11 +29,7 @@ const CardFooter = ({ victor, showRecyclingIcon, showText, begLogo }) => {
             <h4 className="text-[10px] text-[#222222] font-[350] font-bridone md:text-[18px] lg:text-[18px]">
               Aress.Cl
               {victor && (
-                <Image
-                  className="inline md:ml-[7px]"
-                  src={victor}
-                  alt="Vector"
-                />
+                <Image className="inline ml-[7px]" src={victor} alt="Vector" />
               )}
             </h4>
             <p
