@@ -161,7 +161,7 @@ const Interesa = () => {
   // Effect to update itemsToLoad based on screen size
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 769) {
         setItemsToLoad(3); // Load 3 items on small devices
       } else {
         setItemsToLoad(4); // Load 4 items on large devices
@@ -179,12 +179,12 @@ const Interesa = () => {
   }, []);
 
   return (
-    <div className="md:w-[1160px] mx-auto mb-[70px] mt-3 md:mb-[47px] px-[8px] md:px-0">
-      <div className="grid grid-cols-3 gap-2  md:gap-[19px] sm:grid-cols-3 md:grid-cols-4">
+    <div className="lg:w-[1160px] md:w-[720px] mx-auto mb-[70px] mt-3 lg:mb-[47px] px-[8px] lg:px-0">
+      <div className="grid grid-cols-3 gap-2  lg:gap-[19px] sm:grid-cols-3 lg:grid-cols-4">
         {data.slice(0, visibleItems).map((item) => (
           <div
             key={item.id}
-            className="relative md:h-[287px] md:w-[276px] h-[120px] w-[120px] bg-white border border-gray-200 overflow-hidden"
+            className="relative md:h-[227px] md:w-[226px] lg:h-[287px] lg:w-[276px] h-[120px] w-[120px] bg-white border border-gray-200 overflow-hidden"
           >
             {/* Image Container with Hover Effect */}
             <div className="image-container relative w-full h-full">
@@ -197,7 +197,7 @@ const Interesa = () => {
 
             {/* Heart Icon with Toggle Functionality */}
             <div
-              className={`absolute top-2 right-2 w-[16px] h-[16px] md:w-[34px] md:h-[34px] cursor-pointer`} // Apply bg-red class if liked
+              className={`absolute top-2 right-2 w-[16px] h-[16px] lg:w-[34px] lg:h-[34px] cursor-pointer `} // Apply bg-red class if liked
               onClick={() => toggleLike(item.id)} // Toggle like on click
             >
               <Image
@@ -207,7 +207,7 @@ const Interesa = () => {
               />
             </div>
 
-            <div className="absolute w-[10px] h-[10px] md:w-[25px] md:h-[26px] bottom-2 right-2 flex items-center gap-1">
+            <div className="absolute w-[10px] h-[10px] lg:w-[25px] lg:h-[26px] bottom-2 right-2 flex items-center gap-1">
               <Image
                 src={item.currency}
                 alt="Currency"
@@ -215,7 +215,7 @@ const Interesa = () => {
               />
             </div>
 
-            <div className="absolute bottom-2 left-2 font-bridone text-white text-[12px] md:text-[24px]">
+            <div className="absolute bottom-2 left-2 font-bridone text-white text-[12px] lg:text-[24px]">
               <span>{item.name}</span>
             </div>
           </div>
@@ -226,7 +226,7 @@ const Interesa = () => {
       {visibleItems < data.length && (
         <Button
           onClick={loadMore}
-          className="flex mx-auto mt-3 h-[42px] w-[120px] md:mt-[50px] overflow-hidden bg-[#E8B30A] hover:bg-[#E8B30A] rounded-full text-base border-[1.5px] border-black text-black"
+          className="flex mx-auto mt-3 h-[42px] w-[120px] lg:mt-[50px] overflow-hidden bg-[#E8B30A] hover:bg-[#E8B30A] rounded-full text-base border-[1.5px] border-black text-black"
         >
           Ver más
         </Button>

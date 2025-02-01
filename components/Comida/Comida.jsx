@@ -18,17 +18,15 @@ const nunito = Nunito({
 
 const Comida = () => {
   return (
-    <div className="hidden mb-7 md:block md:w-[1160px] mx-auto mt-2">
+    <div className="hidden mb-7 lg:block md:w-[1160px] mx-auto mt-2">
       <div className="flex  items-center justify-between">
         <div className="flex  justify-between ">
           <div className="w-[99px] h-[104px] mr-[34px] border rounded-lg">
-            <div className=" flex items-center my-[10px] justify-center">
+            <div className=" flex  items-center my-[10px] justify-center">
               <Image
-                height={51}
-                width={51}
                 src={coffee}
                 alt="coffee"
-                className=""
+                className="lg:w-[51px] lg:h-[51px]"
               />
             </div>
             <p className="text-center font-bridone text-[#222222] text-[16px]">
@@ -38,11 +36,9 @@ const Comida = () => {
           <div className="w-[99px] h-[104px] mr-[34px] border rounded-lg">
             <div className=" flex items-center my-[10px] justify-center">
               <Image
-                height={51}
-                width={51}
                 src={chocolate}
                 alt="coffee"
-                className=""
+                className="lg:w-[51px] lg:h-[51px]"
               />
             </div>
             <p className="text-center font-bridone text-[#222222] text-[16px]">
@@ -52,11 +48,9 @@ const Comida = () => {
           <div className="w-[99px] h-[104px] mr-[34px] border rounded-lg">
             <div className=" flex items-center my-[10px] justify-center">
               <Image
-                height={51}
-                width={51}
                 src={dinner}
                 alt="coffee"
-                className=""
+                className="lg:w-[51px] lg:h-[51px]"
               />
             </div>
             <p className="text-center font-bridone text-[#222222] text-[16px]">
@@ -73,38 +67,30 @@ const Comida = () => {
           <div className="flex w-[149px] h-[32px] items-center justify-center  mx-auto">
             <div className="mr-[15px]">
               <Image
-                height={30}
-                width={15}
                 src={fb}
                 alt="coffee"
-                className=""
+                className="lg:w-[15px] lg:h-[30px]"
               />
             </div>
             <div className="mr-[15px]">
               <Image
-                height={30}
-                width={30}
                 src={insta}
                 alt="coffee"
-                className=""
+                className="lg:w-[30px] lg:h-[30px]"
               />
             </div>
             <div className="mr-[15px]">
               <Image
-                height={30}
-                width={30}
                 src={whatsapp}
                 alt="coffee"
-                className=""
+                className="lg:w-[30px] lg:h-[30px]"
               />
             </div>
             <div className="mr-[15px]">
               <Image
-                height={30}
-                width={25}
                 src={tiktok}
                 alt="coffee"
-                className=""
+                className="lg:w-[25px] lg:h-[30px]"
               />
             </div>
           </div>

@@ -74,13 +74,13 @@ export default function Mejores() {
   return (
     <div className="py-2 lg:mb-[70px] md:mb-[30px] bg-[url('/hero/Hero.png')] bg-cover bg-center bg-no-repeat">
       <div className="flex justify-center pb-2 lg:mb-[34px] md:pb-4 lg:pb-6">
-        <h2 className="font-bridone text-[14px] md:text-[18px] md:mt-[40px] lg:text-[40px] text-white">
+        <h2 className="font-bridone text-[14px] md:text-[18px] lg:mt-[40px] lg:text-[40px] text-white">
           Mejores Opciones
         </h2>
       </div>
 
       {/* Swiper Slider */}
-      <div className="md:px-[100px] md:mb-[47px] px-[8px] ">
+      <div className="lg:px-[100px] lg:mb-[47px] px-[8px] ">
         <Swiper
           loop={true}
           spaceBetween={30}
@@ -96,7 +96,7 @@ export default function Mejores() {
               spaceBetween: 8,
             },
             768: {
-              slidesPerView: 2,
+              slidesPerView: 3,
               spaceBetween: 20,
             },
             1024: {
@@ -110,16 +110,16 @@ export default function Mejores() {
               <div
                 className={` border  rounded-[8px] bg-white overflow-hidden ${
                   index === activeFirstIndex + 1
-                    ? "md:h-[411px] md:w-[390px]  md:transform md:translate-y-[-20px]" // Larger size for active card
-                    : "md:h-[377px]  md:w-[389px]" // Default size for other cards
-                } h-[233px] w-[180px] md:mt-5`}
+                    ? "lg:h-[411px] lg:w-[390px]  lg:transform lg:translate-y-[-20px]" // Larger size for active card
+                    : "lg:h-[377px]  lg:w-[389px]" // Default size for other cards
+                } h-[233px]  w-[189px] md:w-[235px] lg:mt-5`}
               >
-                {/* className="w-full h-[166px] md:h-[230px] lg:h-[281px]" */}
+                {/* className="w-full h-[166px] lg:h-[230px] lg:h-[281px]" */}
                 <div
                   className={`${
                     index === activeFirstIndex + 1
-                      ? "md:h-[312px] md:w-[389px]" // Larger size for active card
-                      : "md:h-[283px] md:w-[388px]" // Default size for other cards
+                      ? "lg:h-[312px] lg:w-[389px]" // Larger size for active card
+                      : "lg:h-[283px] lg:w-[388px]" // Default size for other cards
                   } w-full h-[166px]`}
                 >
                   <Image
