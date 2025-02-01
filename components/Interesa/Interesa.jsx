@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react"; // Import useState
 import heart from "@/public/accessories/heart.svg";
+import hartRed from "@/public/accessories/hartRed.svg"; // Import the red heart icon
 import currency from "@/public/accessories/dollar.svg";
 import image from "@/public/accessories/image.png";
 import image2 from "@/public/accessories/image2.png";
@@ -196,15 +197,13 @@ const Interesa = () => {
 
             {/* Heart Icon with Toggle Functionality */}
             <div
-              className={`absolute top-2 right-2 w-[10px] h-[10px] md:w-[34px] md:h-[34px] cursor-pointer ${
-                likedItems[item.id] ? "bg-red" : ""
-              }`} // Apply bg-red class if liked
+              className={`absolute top-2 right-2 w-[16px] h-[16px] md:w-[34px] md:h-[34px] cursor-pointer`} // Apply bg-red class if liked
               onClick={() => toggleLike(item.id)} // Toggle like on click
             >
               <Image
-                src={item.heart}
+                src={likedItems[item.id] ? hartRed : heart} // Use hartRed if liked, heart otherwise
                 alt="Heart"
-                className=" w-full h-full" // Optional: Add padding for better appearance
+                className="w-full h-full" // Optional: Add padding for better appearance
               />
             </div>
 
