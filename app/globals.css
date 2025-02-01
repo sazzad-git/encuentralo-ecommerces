@@ -85,7 +85,22 @@ hide {
   margin-top: 4px;
 }
 
-/* for card hover */
+/* Hover effect for images */
+.image-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container:hover {
+  transform: scale(1.05); /* Scale the image on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+/* Red background for the heart icon */
+.bg-red {
+  background-color: red;
+  border-radius: 50%; /* Optional: Make the background circular */
+  /* Optional: Add padding for better appearance */
+}
 
 /* Card hover effect */
 /* Wrapper for scaling and hover effects */
