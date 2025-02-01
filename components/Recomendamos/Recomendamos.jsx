@@ -1,7 +1,6 @@
 import Image from "next/image";
 import shopLogo from "@/public/images/shoplogo.png";
-import { MdOutlineHome } from "react-icons/md";
-import { LuTruck } from "react-icons/lu";
+
 import img from "@/public/Poleronchampionblue1.png";
 import imgOne from "@/public/clothing_01.png";
 import imgTwo from "@/public/clothing_02.png";
@@ -10,6 +9,7 @@ import imgFour from "@/public/images/destacados_2.png";
 import victor2 from "@/public/hero/Vector2.svg";
 
 import { Nunito } from "next/font/google";
+import Icons from "../common/Icons";
 
 const nunito = Nunito({
   weight: "400",
@@ -18,6 +18,7 @@ const nunito = Nunito({
 });
 
 export default function Recomendamos() {
+  const showRecyclingIcon = false;
   const data = [
     { id: 1, img: img },
     { id: 2, img: imgOne, victor: victor2 },
@@ -76,13 +77,8 @@ export default function Recomendamos() {
                   </p>
                 </div>
               </div>
-              <div className="absolute top-2 right-2 flex items-center justify-end gap-1">
-                <div className="w-[22px] h-[24px] border border-[#F1F1F1] grid place-items-center rounded cursor-pointer">
-                  <MdOutlineHome className="size-5 text-[#BF8937]" />
-                </div>
-                <div className="w-[22px] h-[24px] border border-[#F1F1F1] grid place-items-center rounded cursor-pointer">
-                  <LuTruck className="size-5 text-[#BF8937]" />
-                </div>
+              <div className="absolute top-2 right-2 flex items-center md:mt-2 justify-end gap-1">
+                <Icons showRecyclingIcon={showRecyclingIcon} />
               </div>
             </div>
             <p

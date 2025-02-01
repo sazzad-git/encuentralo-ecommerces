@@ -128,7 +128,11 @@ export default function CategoriesMenu() {
     <div
       className={`${nunito.variable} z-50 absolute top-[100%] left-0 w-[240px] md:w-[380px] border border-gray-300 bg-white rounded-[20px] py-5`}
     >
-      <h4 className="text-[10px] md:text-[20px] mb-2 px-5">Categorias</h4>
+      <h4
+        className={`text-[10px] md:text-[20px] text-[#000000] font-bold mb-2 px-5 ${nunito.variable}`}
+      >
+        Categorias
+      </h4>
       <ul className="flex flex-col gap-1 md:gap-3 lg:gap-3">
         {data.map((category, index) => (
           <li
@@ -145,7 +149,9 @@ export default function CategoriesMenu() {
                   src={category.icon}
                   alt={category.name}
                 />
-                <span className="text-[12px] md:text-[16px]">
+                <span
+                  className={`text-[12px] md:text-[16px] font-semibold ${nunito.variable}`}
+                >
                   {category.name}
                 </span>
               </div>
@@ -156,7 +162,7 @@ export default function CategoriesMenu() {
 
             {hoveredCategory === index && (
               <div
-                className="absolute right-[-100px] top-0 ml-2 bg-white border border-gray-300 rounded-lg shadow-lg z-50"
+                className="absolute right-[-164px] w-[180px] top-0 ml-2 bg-white border border-gray-300 rounded-lg shadow-lg z-50"
                 onMouseEnter={handleSubMenuMouseEnter}
                 onMouseLeave={handleSubMenuMouseLeave}
               >
@@ -164,7 +170,7 @@ export default function CategoriesMenu() {
                   {category.subcategory.map((subcat, subIndex) => (
                     <li
                       key={subIndex}
-                      className="px-4 py-1 hover:bg-gray-100 text-[10px] md:text-[14px] lg:text-[16px] cursor-pointer"
+                      className={`px-4 py-1 text-center hover:bg-gray-100 text-[#665E5E] text-[10px] md:text-[14px] lg:text-[15px] cursor-pointer font-semibold ${nunito.variable}`}
                     >
                       {subcat}
                     </li>

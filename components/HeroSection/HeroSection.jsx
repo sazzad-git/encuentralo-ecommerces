@@ -12,12 +12,11 @@ import hero1 from "../../public/hero/hero1.jpg";
 import hero2 from "../../public/hero/hero2.jpg";
 import hero3 from "../../public/hero/hero3.jpg";
 import GroupRight from "@/public/hero/GrpupRight.svg";
-import Mask from "@/public/hero/Mask.svg";
-import car from "@/public/hero/car.svg";
+
 import GroupLeft from "@/public/hero/GroupLeft.svg";
-import { MdOutlineHome, MdOutlineRecycling } from "react-icons/md";
-import { LuTruck } from "react-icons/lu";
+
 import { Nunito } from "next/font/google";
+import HeroIcons from "../common/HeroIcons";
 
 const nunito = Nunito({
   weight: "400",
@@ -160,7 +159,7 @@ function ProductCard({ image, title, title2, shopLogo }) {
         height={200}
         className="w-full h-36 md:h-[194px] lg:h-56 object-cover  md:mt-0 rounded-lg"
       />
-      <div className="flex justify-between p-0 md:p-2 lg:p-4 relative min-h-[45px] md:min-h-[70px] lg:min-h-[100px]">
+      <div className="flex justify-between relative min-h-[45px] md:min-h-[70px] lg:min-h-[100px]">
         <div className="flex items-center gap-1 md:gap-2 lg:gap-3">
           <div className="w-[25px] h-[25px] md:w-[35px] md:h-[35px] lg:w-[52px] lg:h-[52px] rounded-full">
             <Image className="aspect-square" src={shopLogo} alt="Shop Logo" />
@@ -178,18 +177,7 @@ function ProductCard({ image, title, title2, shopLogo }) {
         </div>
 
         <div className="absolute top-2 pt-[5px] right-2 flex items-center justify-end gap-1 lg:top-[38%] lg:-translate-y-1/2">
-          <div className="w-[12px] h-[13px] md:w-[19px] md:h-[18px]  border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer group relative">
-            <Image src={Mask} className="w-full h-full" alt="Mask" />
-            <span className="absolute -top-8 left-[-12px] md:left-[-4px] -translate-x-1/2 whitespace-nowrap bg-gray-900 text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
-              Home Info
-            </span>
-          </div>
-          <div className="w-[12px] h-[13px] md:w-[19px] md:h-[18px]  border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer group relative">
-            <Image src={car} className="w-full h-full" alt="Car" />
-            <span className="absolute -top-8 left-[-22px] md:left-[-8px] -translate-x-1/2 whitespace-nowrap bg-gray-900 text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
-              Delivery Info
-            </span>
-          </div>
+          <HeroIcons />
         </div>
       </div>
     </div>

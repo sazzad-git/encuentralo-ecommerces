@@ -14,6 +14,7 @@ import hero1 from "../../public/hero/hero1.jpg";
 import hero2 from "../../public/hero/hero2.jpg";
 import hero3 from "../../public/hero/hero3.jpg";
 import dotted from "@/public/icon/doted.svg";
+import HeroIcons from "../common/HeroIcons";
 
 const nunito = Nunito({
   weight: "400",
@@ -156,12 +157,7 @@ export default function Mejores() {
                   </div>
 
                   <div className="flex items-center gap-1">
-                    <div className="w-[12px] h-[13px] md:w-[16px] md:h-[16px] lg:w-[22px] lg:h-[24px] border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer">
-                      <Image src={Mask} width={12} height={13} alt="Mask" />
-                    </div>
-                    <div className="w-[12px] h-[13px] md:w-[16px] md:h-[16px] lg:w-[22px] lg:h-[24px] border border-[#F1F1F1] bg-white grid place-items-center rounded cursor-pointer">
-                      <Image src={car} width={12} height={13} alt="Car" />
-                    </div>
+                    <HeroIcons />
                   </div>
                 </div>
               </div>

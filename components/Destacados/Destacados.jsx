@@ -1,8 +1,6 @@
 "use client";
 import Image from "next/image";
-import shopLogo from "@/public/images/shoplogo.png";
-import { MdOutlineHome, MdOutlineRecycling } from "react-icons/md";
-import { LuTruck } from "react-icons/lu";
+
 import React, { useState, useEffect } from "react";
 import img from "@/public/Poleronchampionblue1.png";
 import imgOne from "@/public/images/destacados_2.png";
@@ -16,7 +14,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import Icons from "../common/Icons";
+import CardFooter from "../shared/CardFooter";
 
 const nunito = Nunito({
   weight: "400",
@@ -33,6 +31,9 @@ export default function Destacados() {
     { id: 5, img: imgTwo, thumbnails: [img, imgOne, c, d] },
     { id: 6, img: imgOne, thumbnails: [img, imgOne, c, d] },
   ];
+
+  const showRecyclingIcon = true;
+  const showText = true;
 
   // State to store the selected image for each card
   const [selectedImages, setSelectedImages] = useState(
@@ -97,7 +98,7 @@ export default function Destacados() {
       <Carousel
         opts={{
           align: "start",
-          gap: "30px",
+          gap: "20px",
           loop: true,
         }}
         className="w-full"
@@ -107,74 +108,45 @@ export default function Destacados() {
           {data.map((card) => (
             <CarouselItem
               key={card.id}
-              className="another-second basis-1/2 sm:basis-1/3"
+              className="another-second lg:w-[410px] lg:h-[518px] lg:mt-3  basis-1/2 sm:basis-1/3"
             >
-              <div className="item border rounded-[8px] bg-white overflow-hidden custom-shadow mb-3">
-                <div className="w-full h-[170px] md:h-[230px] lg:h-[324px] relative">
-                  {/* Main Image */}
-                  <Image
-                    className="w-full h-full object-cover"
-                    src={selectedImages[card.id]} // Display the selected image for each card
-                    alt="Slider Cover"
-                  />
+              <div className="card-wrapper hover:rounded-lg lg:w-[364px] lg:h-[494px] lg:mr-1 lg:ml-[6px]">
+                <div className="item border rounded-[8px] bg-white overflow-hidden custom-shadow mb-3">
+                  <div className="w-full h-[170px] md:h-[230px] lg:h-[324px] relative">
+                    {/* Main Image */}
+                    <Image
+                      className="w-full h-full object-cover"
+                      src={selectedImages[card.id]} // Display the selected image for each card
+                      alt="Slider Cover"
+                    />
 
-                  <div className="absolute-img-boxes absolute top-1/2 -translate-y-1/2 left-[10px] z-50 flex flex-col gap-[5px] md:gap-[6px] px-2 py-2 lg:py-3 backdrop-blur-xl backdrop-brightness-90 rounded-lg overflow-hidden">
-                    {/* Small Image Thumbnails */}
-                    {card.thumbnails.map((thumbnail, index) => (
-                      <div
-                        key={index}
-                        className={`absolute-box w-[27px] h-[31px] lg:w-[60px] lg:h-[60px] overflow-hidden border-2 border-white rounded lg:rounded-lg cursor-pointer relative ${
-                          thumbnail === d ? "another-box" : ""
-                        }`}
-                        onClick={() => handleImageClick(card.id, thumbnail)} // Set selected image for this card
-                      >
-                        <Image
-                          className="w-full h-full object-cover transition duration-300 hover:blur-sm"
-                          src={thumbnail}
-                          alt={`Clothing ${index + 1}`}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Other Content */}
-                <div className="flex justify-between p-2 lg:p-4 relative">
-                  <div className="flex items-center gap-2 lg:gap-3">
-                    <div className="w-[25px] h-[25px] md:w-[35px] md:h-[35px] lg:w-[52px] lg:h-[52px] rounded-full">
-                      <Image src={shopLogo} alt="Shop Logo" />
-                    </div>
-                    <div className="leading-0 lg:leading-[125%]">
-                      <h4 className="text-[10px] text-[#222222] font-[350] font-bridone md:text-[18px] lg:text-[18px]">
-                        Aress.Cl
-                        {card.victor && (
+                    <div className="absolute-img-boxes absolute top-1/2 -translate-y-1/2 left-[10px] z-50 flex flex-col gap-[5px] md:gap-[6px] px-2 py-2 lg:py-3 backdrop-blur-xl backdrop-brightness-90 rounded-lg overflow-hidden">
+                      {/* Small Image Thumbnails */}
+                      {card.thumbnails.map((thumbnail, index) => (
+                        <div
+                          key={index}
+                          className={`absolute-box w-[27px] h-[31px] lg:w-[60px] lg:h-[60px] overflow-hidden border-2 border-white rounded lg:rounded-lg cursor-pointer relative ${
+                            thumbnail === d ? "another-box" : ""
+                          }`}
+                          onClick={() => handleImageClick(card.id, thumbnail)} // Set selected image for this card
+                        >
                           <Image
-                            className="inline"
-                            src={card?.victor}
-                            alt="Vector"
+                            className="w-full h-full object-cover transition duration-300 hover:blur-sm"
+                            src={thumbnail}
+                            alt={`Clothing ${index + 1}`}
                           />
-                        )}
-                      </h4>
-                      <p
-                        className={`${nunito.variable} lg:mt-1 text-[9px] md:text-[11px] lg:text-[16px] font-bold text-[#A06205]`}
-                      >
-                        Accesorios
-                        <span className={`${nunito.variable} font-normal`}>
-                          / Joyería
-                        </span>
-                      </p>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                  <div className="absolute top-2 right-2 flex items-center justify-end gap-1 lg:top-1/2 lg:-translate-y-1/2">
-                    <Icons />
-                  </div>
-                </div>
 
-                <p
-                  className={`${nunito.variable} font-sans text-[8px] md:text-[12px] lg:text-[16px] p-2 pt-0 lg:p-3 capitalize`}
-                >
-                  aress.cl es una tienda de articulos de ropa chabacana.
-                </p>
+                  {/* Other Content */}
+                  <CardFooter
+                    showRecyclingIcon={showRecyclingIcon}
+                    victor={card.victor}
+                    showText={showText}
+                  />
+                </div>
               </div>
             </CarouselItem>
           ))}
