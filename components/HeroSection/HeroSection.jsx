@@ -151,13 +151,13 @@ export default function HeroSection() {
 
 function ProductCard({ image, title, title2, shopLogo }) {
   return (
-    <div className="flex-shrink-0 bg-[#FAFAFA] sm:w-[185px] sm:h-[170px] md:mt-[5px] lg:mt-0 md:h-[256px] lg:h-[320px] md:w-full lg:w-full rounded-lg shadow-md m-1 pt-2 md:m-0 px-2 overflow-hidden border border-gray-300">
+    <div className="flex-shrink-0 bg-[#FAFAFA] sm:w-[185px] sm:h-[170px] md:mt-[5px] lg:mt-0 md:h-[256px] lg:h-[320px] md:w-full lg:w-full rounded-sm md:rounded-lg shadow-md m-1 pt-2 md:m-0 px-2 overflow-hidden border border-gray-300">
       <Image
         src={image}
         alt={title}
         width={360}
         height={200}
-        className="w-full h-36 md:h-[194px] lg:h-56 object-cover  md:mt-0 rounded-lg"
+        className="w-full h-36 md:h-[194px] lg:h-56 object-cover  md:mt-0 rounded-sm md:rounded-lg"
       />
       <div className="flex justify-between relative min-h-[45px] md:min-h-[70px] lg:min-h-[100px]">
         <div className="flex items-center gap-1 md:gap-2 lg:gap-3">
