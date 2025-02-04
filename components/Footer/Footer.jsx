@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <div className="h-[165px] md:h-[250px] lg:h-[280px] bg-[#323236]">
+    <div className="h-[165px] md:h-[250px] lg:h-[275px] bg-[#323236]">
       <div className="footer-container h-full flex flex-col justify-end">
-        <h2 className="text-[16px] md:text-[25px] lg:text-[45px] text-white text-center font-semibold py-2 md:py-3 lg:py-3">
+        <h2 className="text-[16px] md:text-[25px] lg:text-[40px] text-white text-center font-semibold py-2 md:py-3 lg:py-3">
           ENCUENTRALO.CL
         </h2>
 

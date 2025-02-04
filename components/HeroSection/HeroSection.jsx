@@ -83,9 +83,9 @@ export default function HeroSection() {
   };
 
   return (
-    <div className="h-[29vh]  md:h-[50vh] bg-cover bg-center bg-no-repeat bg-[url('/hero/Hero.png')] mb-5 md:mb-36">
-      <div className="h-[94%] md:h-full flex flex-col items-center justify-center md:bg-black md:bg-opacity-40">
-        <h1 className="text-white text-xl md:text-5xl md:mb-3 lg:mb-5 md:text-[44px] lg:text-[64px] font-bold text-center mt-2  md:mt-1 ">
+    <div className="h-[29vh] md:h-[40vh] lg:h-[60vh] xl:h-[40vh] 2xl:h-[40vh] bg-cover bg-center bg-no-repeat bg-[url('/hero/Hero.png')] mb-5 md:mb-[25vh]">
+      <div className="h-[94%] md:h-full flex flex-col items-center justify-center md:justify-normal md:bg-black md:bg-opacity-40">
+        <h1 className="text-white text-xl md:text-5xl md:mb-3 lg:mb-5 md:text-[44px] lg:text-[64px] font-bold text-center mt-2  md:mt-4 lg:mt-9 xl:mt-10">
           EMPRENDIMIENTOS DESTACADOS
         </h1>
         <div
@@ -93,7 +93,7 @@ export default function HeroSection() {
           className="w-full max-w-7xl bg-opacity-90 rounded-lg p-0 md:p-4 md:-mb-[13rem]"
         >
           {/* Desktop View */}
-          <div className="hidden md:block">
+          <div className="hidden md:block relative max-w-[1161px] mx-auto px-10 ">
             <Swiper
               modules={[Navigation]}
               navigation={{
@@ -102,11 +102,18 @@ export default function HeroSection() {
               }}
               style={customNavigation}
               slidesPerView={3}
-              spaceBetween={30}
               centeredSlides={true}
               loop={true}
               onSlideChange={handleSlideChange}
               className="md:max-w-[1111px] lg:max-w-[1161px]"
+              breakpoints={{
+                768: {
+                  spaceBetween: 20,
+                },
+                1024: {
+                  spaceBetween: 30,
+                },
+              }}
             >
               {products.map((product) => (
                 <SwiperSlide key={product.id}>
@@ -122,11 +129,13 @@ export default function HeroSection() {
               ))}
             </Swiper>
 
-            <div className="custom-swiper-button-prev md:hidden lg:block absolute left-[-40px] lg:left-[50px] bottom-[150px] transform -translate-y-1/2 z-10 cursor-pointer">
+            {/* Left Button */}
+            <div className="custom-swiper-button-prev absolute left-[-30%] lg:left-[-7%] bottom-[20vh] xl:bottom-[36%] z-10 cursor-pointer">
               <Image src={GroupLeft} width={45} height={45} alt="Previous" />
             </div>
 
-            <div className="custom-swiper-button-next md:hidden lg:block absolute right-[-40px] lg:right-[50px] bottom-[150px] transform -translate-y-1/2 z-10 cursor-pointer">
+            {/* Right Button */}
+            <div className="custom-swiper-button-next absolute right-[-30%] lg:right-[-7%] bottom-[20vh] xl:bottom-[28.5%] transform -translate-y-1/2 z-10 cursor-pointer">
               <Image src={GroupRight} width={45} height={45} alt="Next" />
             </div>
           </div>
@@ -151,25 +160,23 @@ export default function HeroSection() {
 
 function ProductCard({ image, title, title2, shopLogo }) {
   return (
-    <div className="flex-shrink-0 bg-[#FAFAFA] sm:w-[185px] sm:h-[170px] md:mt-[5px] lg:mt-0 md:h-[256px] lg:h-[320px] md:w-full lg:w-full rounded-sm md:rounded-lg shadow-md m-1 pt-2 md:m-0 px-2 overflow-hidden border border-gray-300">
+    <div className="flex-shrink-0 bg-[#FAFAFA] sm:w-[185px] sm:h-[170px] md:mt-[5px] lg:mt-0 md:h-[256px] lg:h-[285px] md:w-full lg:w-full rounded-sm md:rounded-lg shadow-md m-1 pt-2 md:m-0 px-2 overflow-hidden border border-gray-300">
       <Image
         src={image}
         alt={title}
-        width={360}
-        height={200}
-        className="w-full h-36 md:h-[194px] lg:h-56 object-cover  md:mt-0 rounded-sm md:rounded-lg"
+        className="w-full h-36 md:h-[180px] lg:h-[200px] object-cover  md:mt-0 rounded-sm md:rounded-lg"
       />
-      <div className="flex justify-between relative min-h-[45px] md:min-h-[70px] lg:min-h-[100px]">
+      <div className="flex justify-between relative min-h-[45px] md:min-h-[60px] lg:min-h-[70px]">
         <div className="flex items-center gap-1 md:gap-2 lg:gap-3">
           <div className="w-[25px] h-[25px] md:w-[35px] md:h-[35px] lg:w-[52px] lg:h-[52px] rounded-full">
             <Image className="aspect-square" src={shopLogo} alt="Shop Logo" />
           </div>
           <div className="leading-0 lg:leading-[125%]">
-            <h4 className="text-[10px] text-[#222222] font-[350] font-bridone md:text-[18px] ">
+            <h4 className="text-[10px] md:text-[12px] text-[#222222] font-[350] font-bridone lg:text-[18px] ">
               {title}
             </h4>
             <p
-              className={`${nunito.variable} font-sans capitalize lg:mt-2 text-[4px] md:text-[10px] lg:text-[13px]`}
+              className={`${nunito.variable} font-sans capitalize lg:mt-2 text-[8px] md:text-[10px] lg:text-[13px]`}
             >
               {title2}
             </p>

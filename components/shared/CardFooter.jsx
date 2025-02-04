@@ -20,7 +20,7 @@ const CardFooter = ({ victor, showRecyclingIcon, showText, begLogo }) => {
       {/* "flex justify-between p-2 lg:p-4 relative items-center">
                   <div className="flex items-center gap-2 lg:gap-3"> */}
 
-      <div className="flex justify-between p-2 lg:p-4 relative">
+      <div className="flex justify-between p-2 lg:px-4 relative">
         <div className="flex items-center gap-2 lg:gap-3">
           <div className="w-[25px] h-[25px] md:w-[35px] md:h-[35px] lg:w-[52px] lg:h-[52px] rounded-full">
             <Image src={begLogo || shopLogo} alt="Shop Logo" />
@@ -48,7 +48,7 @@ const CardFooter = ({ victor, showRecyclingIcon, showText, begLogo }) => {
 
       {showText && (
         <p
-          className={`${nunito.variable} font-sans text-[8px] md:text-[12px] lg:text-[16px] p-2 pt-0 lg:p-3 capitalize`}
+          className={`${nunito.variable} font-sans text-[8px] md:text-[12px] lg:text-[16px] p-2 pt-0 lg:px-3 lg:pb-3 capitalize`}
         >
           aress.cl es una tienda de articulos de ropa chabacana.
         </p>

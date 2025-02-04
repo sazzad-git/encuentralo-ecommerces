@@ -140,9 +140,9 @@ export default function Recomendamos() {
       {visibleItems < data.length && (
         <Button
           onClick={loadMore}
-          className="flex mx-auto mt-3 h-[42px] w-[120px] md:mt-[50px] overflow-hidden bg-[#E8B30A] hover:bg-[#E8B30A] rounded-full text-base border-[1.5px] border-black text-black"
+          className="flex mx-auto mt-3 h-[45px] w-[140px] md:mt-[50px] overflow-hidden bg-[#E8B30A] hover:bg-[#E8B30A] rounded-full text-base border-[1.5px] border-black text-black"
         >
-          Load more
+          Ver más
         </Button>
       )}
     </div>

@@ -5,11 +5,8 @@ import b from "@/public/images/beg_2.png";
 import c from "@/public/images/beg_3.png";
 import d from "@/public/images/beg_4.png";
 import e from "@/public/images/beg_5.png";
-
 import victor2 from "@/public/hero/Vector2.svg";
-
 import { Nunito } from "next/font/google";
-
 import CardFooter from "../shared/CardFooter";
 
 const nunito = Nunito({
@@ -27,7 +24,7 @@ export default function Trendencla() {
   const showText = false;
 
   return (
-    <div className="hidden lg:block  py-20 lg:mb-[38px]">
+    <div className="hidden lg:block py-20 lg:mb-[38px]">
       <div className="custom-container">
         <div className="grid grid-cols-4 gap-5">
           <div className="col-span-1 bg-white flex items-center justify-center">
@@ -38,7 +35,7 @@ export default function Trendencla() {
 
           <div className="col-span-3 grid grid-cols-2 gap-5">
             {items.map((sItem, index) => (
-              <div key={sItem.id} className="border brder-gray-300">
+              <div key={sItem.id} className="border border-gray-300">
                 <CardFooter
                   showRecyclingIcon={showRecyclingIcon}
                   victor={sItem.victor}
@@ -47,37 +44,46 @@ export default function Trendencla() {
                 />
 
                 <div className="grid grid-cols-5 gap-1 m-1">
-                  <div className="col-span-3 max-h-[125px] overflow-hidden">
+                  {/* Image A */}
+                  <div className="col-span-3 max-h-[125px] overflow-hidden group">
                     <Image
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                       src={sItem.imgA}
                       alt="Trendencla Images"
                     />
                   </div>
-                  <div className="col-span-2 max-h-[125px] overflow-hidden">
+
+                  {/* Image B */}
+                  <div className="col-span-2 max-h-[125px] overflow-hidden group">
                     <Image
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                       src={sItem.imgB}
                       alt="Trendencla Images"
                     />
                   </div>
-                  <div className="col-span-1 max-h-[125px] overflow-hidden">
+
+                  {/* Image C */}
+                  <div className="col-span-1 max-h-[125px] overflow-hidden group">
                     <Image
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                       src={sItem.imgC}
                       alt="Trendencla Images"
                     />
                   </div>
-                  <div className="col-span-3 max-h-[125px] overflow-hidden">
+
+                  {/* Image D */}
+                  <div className="col-span-3 max-h-[125px] overflow-hidden group">
                     <Image
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                       src={sItem.imgD}
                       alt="Trendencla Images"
                     />
                   </div>
-                  <div className="col-span-1 max-h-[125px] overflow-hidden">
+
+                  {/* Image E */}
+                  <div className="col-span-1 max-h-[125px] overflow-hidden group">
                     <Image
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                       src={e}
                       alt="Trendencla Images"
                     />

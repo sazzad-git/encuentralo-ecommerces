@@ -120,12 +120,12 @@ export default function Destacados() {
                       alt="Slider Cover"
                     />
 
-                    <div className="absolute-img-boxes absolute top-1/2 -translate-y-1/2 left-[10px] z-50 flex flex-col gap-[5px] md:gap-[6px] px-2 py-2 lg:py-3 backdrop-blur-xl backdrop-brightness-90 rounded-lg overflow-hidden">
+                    <div className="absolute-img-boxes absolute top-1/2 -translate-y-1/2 left-[10px] z-50 flex flex-col gap-[4px] md:gap-[6px] px-2 py-2 lg:py-3 backdrop-blur-xl backdrop-brightness-90 rounded-lg overflow-hidden">
                       {/* Small Image Thumbnails */}
                       {card.thumbnails.map((thumbnail, index) => (
                         <div
                           key={index}
-                          className={`absolute-box w-[27px] h-[31px] lg:w-[60px] lg:h-[60px] overflow-hidden border-2 border-white rounded lg:rounded-lg cursor-pointer relative ${
+                          className={`absolute-box w-[36px] h-[35px] lg:w-[60px] lg:h-[60px] overflow-hidden border-2 border-white rounded lg:rounded-lg cursor-pointer relative ${
                             thumbnail === d ? "another-box" : ""
                           }`}
                           onClick={() => handleImageClick(card.id, thumbnail)} // Set selected image for this card

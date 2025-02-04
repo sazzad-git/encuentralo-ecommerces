@@ -22,9 +22,9 @@ const nunito = Nunito({
 
 const Ceache = () => {
   return (
-    <div className="md:mt-[60px] mt-2 md:mb-[72px]">
+    <div className="md:mt-[30px] mt-2 md:mb-[30px]">
       {/* Main Background Container */}
-      <div className="relative bg-cover w-[94%px] h-[120px] md:w-[90%] lg:w-[90%] lg:max-w-[1160px] mx-auto md:h-[200px] lg:h-[296px] rounded-2xl md:rounded-xl bg-center bg-no-repeat bg-[url('/ceache/background.png')]">
+      <div className="relative bg-cover w-[96%] h-[120px] md:w-[90%] lg:w-[90%] lg:max-w-[1160px] mx-auto md:h-[200px] lg:h-[296px] rounded-2xl md:rounded-xl bg-center bg-no-repeat bg-[url('/ceache/background.png')]">
         {/* Buttons with Text in the Top-Right Corner */}
         <div className="absolute hidden md:flex top-4 right-4 gap-4">
           {/* First Button */}
@@ -60,25 +60,30 @@ const Ceache = () => {
           </button>
         </div>
 
-        {/* Bottom Buttons with Dollar and Car Icons */}
-        <div className="absolute -bottom-9 -right-1 md:bottom-4 md:bg-white md:border md:border-[#A06205] md:right-4 p-2 flex flex-row-reverse md:flex-col gap-2 rounded-lg">
-          {/* Dollar Icon with Button */}
+        {/* Bottom Inputs with Dollar and Car Icons */}
+        <div className="absolute -bottom-9 -right-1 w-[280px] md:w-[200px] lg:w-[200px] md:bottom-4 md:bg-white md:border md:border-[#A06205] md:right-4 p-2 flex flex-row-reverse md:flex-col gap-2 rounded-lg">
+          {/* Dollar Icon with Input */}
           <div className="flex items-center gap-0 md:gap-2">
             <Image src={dollar} alt="Dollar Icon" className="w-5 h-3 md:h-4" />
-            <button className="border bg-[#f9f6f0] border-[#A06205] text-[#A06205] rounded-full px-4 py-1 md:text-sm text-[10px]">
-              Métodos de Pago
-            </button>
+            <input
+              type="text"
+              placeholder="Métodos de Pago"
+              className="border bg-[#f9f6f0] border-[#A06205] placeholder:text-[#A06205] rounded-full placeholder:px-4 py-0 placeholder:md:py-[2px] placeholder:md:text-sm placeholder:py-0 placeholder:text-[10px] w-[90%]"
+            />
           </div>
-          {/* Car Icon with Button */}
+
+          {/* Car Icon with Input */}
           <div className="flex items-center gap-0 md:gap-2">
             <Image
               src={car}
               alt="Car Icon"
               className="w-5 h-3 md:h-6 mt-[5px] md:mt-[7px]"
             />
-            <button className=" border bg-[#f9f6f0] border-[#A06205] text-[#A06205] rounded-full px-4 py-1 md:text-sm text-[10px]">
-              Métodos de Envío
-            </button>
+            <input
+              type="text"
+              placeholder="Métodos de Envío"
+              className="border bg-[#f9f6f0] border-[#A06205] placeholder:text-[#A06205] rounded-full placeholder:px-4 py-0 placeholder:md:py-[2px] placeholder:md:text-sm placeholder:py-0 placeholder:text-[10px] w-[90%]"
+            />
           </div>
         </div>
 
@@ -152,13 +157,13 @@ const Ceache = () => {
               </div>
             </h2>
 
-            <p className="text-[10px] md:text-[14px] lg:text-[17px] text-[#FFFFFF] pb-[35px] md:pb-[60px] max-w-[220px] md:max-w-full lg:max-w-full text-center md:text-left">
+            <p className="text-[10px] md:text-[14px] lg:text-[17px] text-[#FFFFFF] pb-[35px] md:pb-[60px] max-w-[220px] md:max-w-[260px] lg:max-w-full text-center md:text-left">
               _ch_accesorios es una tienda de accesorios únicos y modernos.
             </p>
           </div>
         </div>
       </div>
-      <div className="w-[385px] md:w-[768px] lg:w-[1160px] mx-auto">
+      <div className="w-[96%] md:w-[90%] lg:w-[90%] lg:max-w-[1160px] mx-auto">
         {/* Additional Information Below the Background Image */}
         <div className="mt-[35px] mb-[35px] md:mb-0 md:mt-[12px] flex flex-col-reverse md:flex-row items-center md:items-center md:justify-between text-[#333] md:ml-[250px] relative z-10">
           {/* Website Information */}

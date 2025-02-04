@@ -55,7 +55,7 @@ export default function Header() {
               type="text"
               placeholder="Buscar productos, marcas y más..."
             />
-            <i className="fa-solid fa-magnifying-glass size-3 lg:size-5 text-[#A06205] absolute top-1/2 left-[12px] -translate-y-1/2"></i>
+            <i className="fa-solid fa-magnifying-glass size-3 lg:size-5 text-[#A06205] absolute top-[9px] left-[10px] md:top-1/2 md:left-[12px] -translate-y-1/2"></i>
 
             {/* Filter Icon with Dropdown */}
             <div className="filter-icon md:h-[24px] absolute top-1/2 right-[7px] -translate-y-1/2 flex items-center justify-end gap-3">
