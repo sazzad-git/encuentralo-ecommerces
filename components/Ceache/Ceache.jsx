@@ -24,7 +24,7 @@ const Ceache = () => {
   return (
     <div className="md:mt-[60px] mt-2 md:mb-[72px]">
       {/* Main Background Container */}
-      <div className="relative bg-cover w-[370px] h-[120px] md:w-[710px] lg:w-[1160px] mx-auto md:h-[200px] lg:h-[296px] rounded-2xl md:rounded-xl bg-center bg-no-repeat bg-[url('/ceache/background.png')]">
+      <div className="relative bg-cover w-[94%px] h-[120px] md:w-[90%] lg:w-[90%] lg:max-w-[1160px] mx-auto md:h-[200px] lg:h-[296px] rounded-2xl md:rounded-xl bg-center bg-no-repeat bg-[url('/ceache/background.png')]">
         {/* Buttons with Text in the Top-Right Corner */}
         <div className="absolute hidden md:flex top-4 right-4 gap-4">
           {/* First Button */}
@@ -175,7 +175,7 @@ const Ceache = () => {
               www.ch_accesorios.cl
             </Link>
           </div>
-          <hr className="md:hidden absolute border-[1px] border-[#999999] w-[363px]" />
+          <hr className="md:hidden absolute text-center border-[1px] border-[#999999] w-[90%]" />
 
           {/* Location Information */}
           <div className="flex items-center gap-2 text-lg font-medium">

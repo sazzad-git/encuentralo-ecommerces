@@ -6,6 +6,8 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
+// div className="w-[173px] md:w-full h-[170px] lg:h-[293px] p-2"
+
 const CarouselContext = React.createContext(null);
 
 function useCarousel() {

@@ -75,12 +75,14 @@ export default function Interesar({ title }) {
           {data.map((sData, index) => (
             <CarouselItem
               key={sData.id}
-              className="another-second sm:min-w-0 sm:shrink-0 sm:grow-0 lg:mt-3 lg:mb-3  basis-1/2 md:basis-1/3 lg:basis-1/4"
+              className="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 shrink-0 p-2"
+              // className="another-second sm:min-w-0 sm:shrink-0 sm:grow-0 lg:mt-3 lg:mb-3  basis-1/2 md:basis-1/3 lg:basis-1/4"
             >
               {/* Wrapper for scaling and hover effects */}
+
               <div className="card-wrapper lg:mr-1 lg:ml-1">
                 <div className="item border">
-                  <div className="w-[173px] md:w-full h-[170px] lg:h-[293px] p-2">
+                  <div className="w-full md:w-full h-[170px] lg:h-[293px] p-2">
                     <Image
                       className="w-full h-full object-cover"
                       src={sData.img}

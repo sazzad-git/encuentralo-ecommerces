@@ -18,8 +18,8 @@ const nunito = Nunito({
 
 const Comida = () => {
   return (
-    <div className="hidden mb-7 lg:block md:w-[1160px] mx-auto mt-2">
-      <div className="flex  items-center justify-between">
+    <div className="hidden  lg:block custom-container mx-auto mt-2">
+      <div className="flex mb-7  items-center justify-between">
         <div className="flex  justify-between ">
           <div className="w-[99px] h-[104px] mr-[34px] border rounded-lg">
             <div className=" flex  items-center my-[10px] justify-center">

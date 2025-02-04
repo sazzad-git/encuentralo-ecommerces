@@ -15,7 +15,9 @@ const page = () => {
       <Header></Header>
 
       <Navbar></Navbar>
-      <Ceache></Ceache>
+      <div className="overflow-hidden">
+        <Ceache></Ceache>
+      </div>
 
       <Comida></Comida>
 
