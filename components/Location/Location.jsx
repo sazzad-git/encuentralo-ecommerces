@@ -41,37 +41,6 @@ const Location = () => {
             >
               {data1.subtitle}
             </p>
-            {/* Percentage Boxes - Responsive Layout */}
-            <div className="flex flex-col md:flex-row items-center gap-3 mt-3">
-              {/* First Price Box */}
-              <div className="flex items-center gap-2 border border-[#666666] rounded-lg px-4 py-2 w-max">
-                <Image
-                  src={parcentage}
-                  alt="Discount"
-                  className="w-4 h-4 md:w-6 md:h-6"
-                />
-                <span className="text-[12px] md:text-[18px] lg:text-[24px] text-[#666666] font-medium">
-                  $5.990
-                </span>
-              </div>
-
-              {/* Second Price Box */}
-              <div className="relative flex items-center gap-2 border border-[#666666] rounded-lg px-4 py-2 w-max">
-                <Image
-                  src={parcentage}
-                  alt="Discount"
-                  className="w-4 h-4 md:w-6 md:h-6"
-                />
-                <span className="text-[12px] md:text-[18px] lg:text-[24px] text-[#666666] font-medium">
-                  $3.990
-                </span>
-
-                {/* Old Price with Strikethrough */}
-                <span className="absolute top-0 left-4 text-[8px] md:text-[12px] lg:text-[14px] text-[#666666] line-through">
-                  $5.990
-                </span>
-              </div>
-            </div>
           </div>
 
           {/* Schedule Box */}
