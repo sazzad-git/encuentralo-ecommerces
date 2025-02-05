@@ -16,6 +16,7 @@ import image9 from "@/public/accessories/image9.png";
 import image10 from "@/public/accessories/image10.png";
 import image11 from "@/public/accessories/image11.png";
 import image12 from "@/public/accessories/imagee12.png";
+import parcentage from "@/public/parcentage.svg";
 import { Button } from "../ui/button";
 
 const data = [
@@ -138,6 +139,8 @@ const data = [
 const Interesa = () => {
   // State to track liked status for each item
   const [likedItems, setLikedItems] = useState({});
+  // State to control visibility
+  const [showPrices, setShowPrices] = useState(false);
 
   // State to track the number of visible items
   const [visibleItems, setVisibleItems] = useState(12);
@@ -186,7 +189,7 @@ const Interesa = () => {
         {data.slice(0, visibleItems).map((item) => (
           <div
             key={item.id}
-            className="relative md:h-[227px] md:w-[99%] lg:h-[287px] lg:w-[276px] h-[120px] w-[99%] bg-white border border-gray-200 overflow-hidden"
+            className="relative md:h-[227px] md:w-[99%] lg:h-[287px] lg:w-[99.5%] h-[120px] w-[99%] bg-white border border-gray-200 overflow-hidden"
           >
             {/* Image Container with Hover Effect */}
             <div className="image-container relative w-full h-full">
@@ -195,6 +198,54 @@ const Interesa = () => {
                 alt={item.name}
                 className="w-full h-full object-cover"
               />
+
+              {/* Centered Button for imagee12 */}
+              {item.image === image12 && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Button
+                    onClick={() => setShowPrices(!showPrices)}
+                    className="h-[25px] w-[90px] md:h-[45px] md:w-[140px] overflow-hidden bg-[#E8B30A] hover:bg-[#E8B30A] rounded-full md:text-base text-white"
+                  >
+                    Me Interesa
+                  </Button>
+
+                  {/* Percentage Boxes (Visible only when showPrices is true) */}
+                  {showPrices && (
+                    <div className="absolute left-1/2 top-0 md:top-5 transform -translate-x-1/2 mt-3 flex flex-col md:flex-row items-center gap-3">
+                      {/* First Price Box */}
+                      <div className="hidden md:block">
+                        <div className="flex items-center bg-white md:gap-2 border border-[#666666] rounded-lg px-2 md:py-2 w-max">
+                          <Image
+                            src={parcentage}
+                            alt="Discount"
+                            className="w-4 h-4 md:w-6 md:h-6"
+                          />
+                          <span className="text-[12px] md:text-[18px] lg:text-[24px] text-[#666666] font-medium">
+                            $5.990
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Second Price Box */}
+                      <div className="relative bg-white flex items-center gap-2 border border-[#666666] rounded-lg px-2 py-2 w-max">
+                        <Image
+                          src={parcentage}
+                          alt="Discount"
+                          className="w-4 h-4 md:w-6 md:h-6"
+                        />
+                        <span className="text-[12px] md:text-[18px] lg:text-[24px] text-[#666666] font-medium">
+                          $3.990
+                        </span>
+
+                        {/* Old Price with Strikethrough */}
+                        <span className="absolute top-0 left-2 text-[8px] md:text-[12px] lg:text-[14px] text-[#666666] line-through">
+                          $5.990
+                        </span>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
 
             {/* Heart Icon with Toggle Functionality */}

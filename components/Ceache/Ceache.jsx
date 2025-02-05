@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import flag from "@/public/ceache/flag.svg";
 import frame from "@/public/ceache/Frame.svg";
@@ -13,6 +14,7 @@ import whatsapp from "@/public/ceache/whatsapp.svg";
 import tiktok from "@/public/ceache/tiktok.svg";
 import { Nunito } from "next/font/google";
 import Link from "next/link";
+import Location from "../Location/Location";
 
 const nunito = Nunito({
   weight: "400",
@@ -21,6 +23,8 @@ const nunito = Nunito({
 });
 
 const Ceache = () => {
+  const [showLocation, setShowLocation] = useState(false);
+
   return (
     <div className="md:mt-[30px] mt-2 md:mb-[30px]">
       {/* Main Background Container */}
@@ -183,13 +187,22 @@ const Ceache = () => {
           <hr className="md:hidden absolute text-center border-[1px] border-[#999999] w-[90%]" />
 
           {/* Location Information */}
-          <div className="flex items-center gap-2 text-lg font-medium">
+          <div
+            onClick={() => setShowLocation(!showLocation)}
+            className="flex items-center gap-2 text-lg font-medium"
+          >
             <Image src={location} alt="Location Icon" className="w-5 h-5" />
-            <span className="text-[12px] md:text-[14px] lg:text-[17px] text-[#666666]">
+            <span className="text-[12px] md:text-[14px] cursor-pointer lg:text-[17px] text-[#666666]">
               3.5 km | Providencia, Región Metropolitana
             </span>
           </div>
         </div>
+        {/* Show Location Component when clicked */}
+        {showLocation && (
+          <div className="mt-8 hidden lg:block">
+            <Location />
+          </div>
+        )}
       </div>
     </div>
   );

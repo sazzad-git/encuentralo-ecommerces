@@ -36,7 +36,7 @@ export default function Mejores() {
     {
       id: 2,
       image: hero3,
-      victor: victor2,
+
       title: "Impulsonaturaltienda",
       title2: "Proteinas, Vitaminas, Minerales",
       shopLogo: img2,
@@ -44,6 +44,7 @@ export default function Mejores() {
     {
       id: 3,
       image: hero1,
+      victor: victor2,
       title: "5ave.nue",
       title2: "Camisetas, Sudaderas, Pantalones",
       shopLogo: img3,
@@ -73,14 +74,14 @@ export default function Mejores() {
 
   return (
     <div className="py-2 lg:mb-[70px] md:mb-[30px] bg-[url('/hero/Hero.png')] bg-cover bg-center bg-no-repeat">
-      <div className="flex justify-center pb-2 lg:mb-[34px] md:pb-4 lg:pb-6">
-        <h2 className="font-bridone text-[14px] md:text-[18px] lg:mt-[40px] lg:text-[40px] text-white">
+      <div className="flex justify-center pb-2 lg:mb-[34px] md:pb-4 lg:pb-0">
+        <h2 className="font-bridone text-[14px] md:text-[18px] lg:mt-[10px] lg:text-[40px] text-white">
           Mejores Opciones
         </h2>
       </div>
 
       {/* Swiper Slider */}
-      <div className="lg:px-[100px] lg:mb-[47px] px-[8px] ">
+      <div className="w-[96%] md:w-[90%] lg:w-[90%] lg:max-w-[1160px] mx-auto ">
         <Swiper
           loop={true}
           spaceBetween={30}
@@ -108,18 +109,18 @@ export default function Mejores() {
           {data.map((card, index) => (
             <SwiperSlide key={card.id}>
               <div
-                className={` border  rounded-[8px] bg-white overflow-hidden ${
+                className={` border  rounded-[4px] bg-white overflow-hidden ${
                   index === activeFirstIndex + 1
-                    ? "lg:h-[411px] lg:w-[390px]  lg:transform lg:translate-y-[-20px]" // Larger size for active card
-                    : "lg:h-[377px]  lg:w-[389px]" // Default size for other cards
-                } h-[233px]  w-[189px] md:w-[235px] lg:mt-5`}
+                    ? "lg:h-[23em]   lg:transform lg:translate-y-[-20px]" // Larger size for active card
+                    : "lg:h-[21em]  " // Default size for other cards
+                } max-h-[45%]  w-[99.5%] lg:mt-5`}
               >
                 {/* className="w-full h-[166px] lg:h-[230px] lg:h-[281px]" */}
                 <div
                   className={`${
                     index === activeFirstIndex + 1
-                      ? "lg:h-[312px] lg:w-[389px]" // Larger size for active card
-                      : "lg:h-[283px] lg:w-[388px]" // Default size for other cards
+                      ? "lg:h-[292px] lg:w-[389px]" // Larger size for active card
+                      : "lg:h-[253px] lg:w-[388px]" // Default size for other cards
                   } w-full h-[166px]`}
                 >
                   <Image
@@ -128,8 +129,8 @@ export default function Mejores() {
                     alt="Slider Cover"
                   />
                 </div>
-                <div className="flex justify-between p-2 lg:p-4">
-                  <div className="flex items-center gap-1 md:gap-2 lg:gap-3">
+                <div className="flex justify-between px-2 lg:px-4">
+                  <div className="flex items-center justify-center h-[10vh]   gap-1 md:gap-2 lg:gap-3">
                     <div className="w-[25px] h-[25px] md:w-[35px] md:h-[35px] lg:w-[52px] lg:h-[52px] rounded-full">
                       <Image
                         className="aspect-square"
@@ -138,7 +139,7 @@ export default function Mejores() {
                       />
                     </div>
                     <div>
-                      <h4 className="text-[6px] text-[#222222] font-[350] font-bridone md:text-[13px] lg:text-[20px]">
+                      <h4 className="text-[10px] text-[#222222] font-[350] font-bridone md:text-[13px] lg:text-[18px] md:w-[100px] lg:w-[150px]">
                         {card.title}{" "}
                         {card.victor && (
                           <Image
@@ -149,7 +150,7 @@ export default function Mejores() {
                         )}
                       </h4>
                       <p
-                        className={`${nunito.variable} font-sans capitalize lg:mt-2 text-[4px] md:text-[10px] lg:text-[13px]`}
+                        className={`${nunito.variable} font-sans capitalize lg:mt-2 text-[8px] md:text-[10px] lg:text-[13px]`}
                       >
                         {card.title2}
                       </p>
